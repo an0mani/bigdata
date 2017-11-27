@@ -15,10 +15,10 @@
 <link rel="stylesheet" href="assets/css/main2.css" />
 </head>
 <body id="top">
-	<header id="header">
-				<div class="inner" style="margin-bottom: 0px;">
+	<header id="header1">
+				<div class="inner1" >
 				
-					<a href="#" class="image avatar"><img src="images/baby.jpg" alt="" /></a>
+					<a href="#" class="image avatar"><img src="back_image/baby.jpg" alt="" /></a>
 					<input type = "button" name = "write" value = "글쓰기" onclick="alert('글쓰기');" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">	
 					<input type = "button" name = "menu" value = "메뉴" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />

@@ -2462,7 +2462,7 @@
 
 /* Header */
 
-	#header {
+	#header1 {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2495,7 +2495,7 @@
 		width: 20%;
 	}
 
-		#header > * {
+		#header1 > * {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
@@ -2503,7 +2503,7 @@
 			width: 100%;
 		}
 
-		#header > .inner {
+		#header1 > .inner1 {
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
@@ -2511,22 +2511,22 @@
 			margin: 0 0 2em 0;
 		}
 
-		#header strong, #header b {
+		#header1 strong, #header1 b {
 			color: #ffffff;
 		}
 
-		#header h2, #header h3, #header h4, #header h5, #header h6 {
+		#header1 h2, #header1 h3, #header1 h4, #header1 h5, #header1 h6 {
 			color: #ffffff;
 		}
 
-		#header h1 {
+		#header1 h1 {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
 		}
 
-		#header .image.avatar {
+		#header1 .image.avatar {
 			margin: 0 0 1em 0;
 			width: 6.25em;
 		}
@@ -2843,7 +2843,7 @@
 		display: none !important;
 	}
 
-	body.is-touch #header {
+	body.is-touch #header1 {
 		background-attachment: scroll;
 		background-size: auto, cover;
 	}
@@ -2872,16 +2872,16 @@
 
 		/* Header */
 
-			#header {
+			#header1 {
 				padding: 6em 3em 3em 3em;
 				width: 30%;
 			}
 
-				#header h1 {
+				#header1 h1 {
 					font-size: 1.25em;
 				}
 
-					#header h1 br {
+					#header1 h1 br {
 						display: none;
 					}
 
@@ -2924,7 +2924,7 @@
 
 		/* Header */
 
-			#header {
+			#header1 {
 				background-attachment: scroll;
 				background-position: top left, center center;
 				background-size: auto,		cover;
@@ -2937,11 +2937,11 @@
 				display: block;
 			}
 
-				#header h1 {
+				#header1 h1 {
 					font-size: 1.75em;
 				}
 
-					#header h1 br {
+					#header1 h1 br {
 						display: inline;
 					}
 
@@ -3028,11 +3028,11 @@
 
 		/* Header */
 
-			#header {
+			#header1 {
 				padding: 2.25em 1.5em;
 			}
 
-				#header h1 {
+				#header1 h1 {
 					font-size: 1.35em;
 				}
 
@@ -3106,11 +3106,11 @@
 
 		/* Header */
 
-			#header {
+			#header1 {
 				padding: 4.5em 1.5em;
 			}
 
-				#header h1 br {
+				#header1 h1 br {
 					display: none;
 				}
 
