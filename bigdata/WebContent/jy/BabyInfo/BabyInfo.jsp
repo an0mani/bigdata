@@ -5,25 +5,23 @@
 <head>
 <style type="text/css">
 	#top {
-		background-image: url("messageboardflower.png");
+		background-image: url("babyimage.png");
 		background-repeat: no-repeat;
 		font-family: 'a고래야놀자';
 		font-size: x-large;
+    	margin-right: 400px;
+    	margin-left: 50px;
 	}
 	
-	#two > h3 {
-		font-size: 35px;
-	}
-	
-	#two > .row > .6u 12u$(xsmall) work-item {
-		width: 33% !important;
-	}
+  	th, td {
+    	border-bottom: 1px solid #444444;
+    	padding: 10px;
+  	}
 </style>
 <title>to baby from mom, message board</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/main2.css" />
 </head>
 <body id="top">
 
@@ -60,85 +58,52 @@
 
 	<!-- Main -->
 	<div id="main"
-		style="/* margin-left: 380px; */ padding-top: 0px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px; margin-left: 300px; margin-right: 300px;">
+		style="margin-left: 380px; padding-top: 0px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px; margin-left: 300px;">
 
 		<!-- One -->
-		<section id="one"> <header class="major">
-		<h1 style="font-size: 80px; color: #4C4C4C;">To Baby From Mom.</h1>
-		</header>
-		<p>회원님들의 소통페이지 입니다. 여러분의 소중한 추억과 아기의 자랑거리를 공유해주세요.</p>
+		<section id="one">
+		<header class="major">
+		
+		<img src="baby.png" width="200px" height="200px" style="margin-left: 450px; margin-top: 100px;">
+		<table border='1' align="center" style="border-top: 1px solid #444444; border-collapse: collapse; width: 700px; margin-left: 200px;">
+			<tr>
+				<td align="center">이 름</td>
+				<td align="center">#</td>
+			</tr>
+			
+			<tr>
+				<td align="center">성 별</td><td align="center"> 여자 <input type="radio" value="gender" checked="checked" name="여자"> 남자 <input type="radio" value="gender" checked="checked" name="남자"></td>
+			</tr>
+			
+			<tr>
+				<td align="center">생년월일</td><td align="center">#</td>
+			</tr>
+			
+			<tr>
+				<td align="center">혈액형</td><td align="center">#</td>
+			</tr>
+			
+			<tr>
+				<td align="center">몸무게</td><td align="center">#</td>
+			</tr>
+			
+			<tr>
+				<td align="center">신 장</td><td align="center">#</td>
+			</tr>																	
+		</table>
+
 		<ul class="actions">
-			<li><a href="writing.jsp" class="button">Message Writing</a></li>
+			<li align="center"><a href="#" class="button" style="margin-left: 430px;">수정하기</a></li>
 		</ul>
-		</section>
+				
+	</header>
+</section>
 
 		<!-- Two -->
-		<section id="two">
-		<h2>Album</h2>
-		<div class="row">
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Ultricies lacinia interdum</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Tortor metus commodo</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Nunc enim commodo aliquet</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-
-
-
-		</div>
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
 		</ul>
 		</section>
-
 		<!-- Three -->
 		<!-- <section id="three">
 						<h2>Get In Touch</h2>
@@ -499,30 +464,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</div>
 
-	<!-- Footer -->
-	<!-- <footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer> -->
-
 	<!-- Scripts -->
-	<script src="assets/js/jquery.onvisible.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
 </body>
