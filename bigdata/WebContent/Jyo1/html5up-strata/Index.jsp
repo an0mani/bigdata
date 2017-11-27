@@ -1,105 +1,163 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link href="assets/css/main.css" rel="stylesheet" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<style type="text/css">
+/* #top{
+	background-image: url(back_image/sunflower3.jpg);
+} */
+.inner{
+	font-family: 'a고래야놀자';
+}
+
+#header1{
+	font-family: 'a고래야놀자';
+	text-align: center !important;
+}
+#main{
+	font-family: 'a고래야놀자';
+}
+</style>
+<title></title>
 <meta charset="utf-8" />
-<title>Strata by HTML5 UP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/main2.css" />
 </head>
 <body id="top">
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner" style="margin-bottom: 0px;">
-					<a href="#" class="image avatar"><img src="back_image/baby.jpg" alt=""/></a>
-					<form action = "writer.jsp">
-					<input type = "submit" name = "write" value = "글쓰기" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">
-					<input type = "button" name = "menu" value = "메뉴" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">
+	<header id="header1">
+				<div class="inner1" style="margin-top: 40px">
+				
+					<a href="#" class="image avatar"><img src="back_image/baby.jpg" alt="" /></a>
+					<form action = "writing.jsp">
+					<h3>ㅇㅇㅇ맘</h3>
+					<h4>D-OO</h4>
+					<input type = "submit" name = "write" value = "다이어리" style="width: 50px; height: 50px; min-width: 8em !important; font-size: 20px; margin-bottom: 3px; center; color: white !important; font-family: 'a고래야놀자';">
+					<input type = "button" name = "menu" value = "프로필" style="width: 50px; height: 50px; min-width: 8em !important; font-size: 20px; margin-bottom: 3px; text-align: center; color: white !important; font-family: 'a고래야놀자';">
 					</form>
-					
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
 					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
 				</div>
 			</header>
-
-		<!-- Main -->
-			<div id="main" style = "margin-left: 380px;padding-top: 50px;padding-bottom: 100px;padding-left: 50px;padding-right: 0px;border-bottom-width: 100px;">
-
-				<!-- One -->
-					<!-- <section id="one">
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</section> -->
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Album</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/baby.jpg" class="image fit thumb"><img src="images/thumbs/baby.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
+	<!-- Header -->
+		<!-- Menu -->
+	<div id="wrapper">
+		
+				<!-- Header -->
+					<header id="header" style="padding-top: 0px;padding-bottom: 0px;height: 0px;width: 1800px;">
+						<div class="inner">
+					
+							<!-- Logo -->
 							
-							
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
 						</div>
-						<ul class="actions">
-							<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
+					</header>
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="Index.jsp">홈페이지</a></li>
+							<li><a href="Index.jsp">아기용품공간</a></li>
+							<li><a href="Index.jsp">나만의 육아일기</a></li>
+							<li><a href="Index.jsp">이야기해요</a></li>
+							<li><a href="Index.jsp">로그아웃</a></li>
 						</ul>
-					</section>
+					</nav>
 
-				<!-- Three -->
-					<!-- <section id="three">
+			</div>
+	<!-- Logo -->
+	
+	<!-- Main -->
+	<div id="main" style="margin-left: 380px;padding-top: 0px;padding-bottom: 50px;padding-left: 50px;padding-right: 0px;border-bottom-width: 100px;">
+
+		<!-- One -->
+		<section id="one">
+			<!-- <header class="major">
+				<h2>To Baby From Mom.</h2>
+			</header>
+			<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+				<ul class="actions">
+					<li><a href="writing.jsp" class="button">Message Writing</a></li>
+					<li><a href="#" class="button">Logout</a></li>
+				</ul> -->
+		</section>
+
+		<!-- Two -->
+		<section id="two" style = "border-top-width: 0px; margin-top: 0px; padding-top: 50px;">
+		<h2>Album</h2>
+		<div class="row">
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u$ 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Quam neque phasellus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u$ 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Ultricies lacinia interdum</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Tortor metus commodo</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Nunc enim commodo aliquet</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			<article class="6u$ 12u$(xsmall) work-item"> <a
+				href="images/fulls/baby.jpg" class="image fit thumb"><img
+				src="images/thumbs/baby.jpg" alt="" /></a>
+			<h3>Quam neque phasellus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+			</article>
+			
+		
+			
+		</div>
+		<ul class="actions">
+			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
+		</ul>
+		</section>
+
+		<!-- Three -->
+		<!-- <section id="three">
 						<h2>Get In Touch</h2>
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
 						<div class="row">
@@ -136,8 +194,8 @@
 						</div>
 					</section> -->
 
-				<!-- Four -->
-				<!--
+		<!-- Four -->
+		<!--
 					<section id="four">
 						<h2>Elements</h2>
 
@@ -456,10 +514,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 				-->
 
-			</div>
+	</div>
 
-		<!-- Footer -->
-			<!-- <footer id="footer">
+	<!-- Footer -->
+	<!-- <footer id="footer">
 				<div class="inner">
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -473,14 +531,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				</div>
 			</footer> -->
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
+	<!-- Scripts -->
+	<script src="assets/js/jquery.onvisible.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
 
 </body>
 </html>
