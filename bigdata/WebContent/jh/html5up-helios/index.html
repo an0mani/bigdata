@@ -7,7 +7,6 @@
 <html>
 <head>
 <style>
-
 video {
 	position: absolute;
 	top: 0px;
@@ -19,11 +18,14 @@ video {
 	volume: 15%;
 }
 
-#mainfont{
+#mainfont, #nav {
 	font-family: 'a고래야놀자';
 	font-size: 116px;
 	font-weight: bold;
-	color: blue;
+}
+
+#banner {
+	padding-top: 0;
 }
 </style>
 <title>Helios by HTML5 UP</title>
@@ -37,34 +39,43 @@ video {
 	<div id="page-wrapper">
 
 		<!-- Header -->
-		
+
 		<div id="header">
-		
-		<video autoplay="autoplay" src="baby.mp4" loop="loop"></video>
+
+			<video autoplay="autoplay" src="baby.mp4" loop="loop"></video>
 			<!-- Inner -->
 			<div class="inner">
 				<header>
 					<h1>
-						<div id="mainfont"><a href="index.html" id="logo">아이에게 엄마가</a></div>
+						<div id="mainfont">
+							<a href="index.html" id="logo">아이에게 엄마가</a>
+						</div>
 					</h1>
 					<hr />
-					<p>회원이 아니신가요? >> <a  href="#" style="color:black; font-weight: bold">회원가입</a> 하러 가기</p>
+					<p>
+						회원이 아니신가요? >> <a href="#menu"
+							style="color: black; font-weight: bold">회원가입</a> 하러 가기
+					</p>
 				</header>
 				<footer>
 					<a href="#banner" class="button circled scrolly">Login</a>
 				</footer>
 
 
-				
+				<!-- Menu -->
+
+
+
 
 
 			</div>
 
 			<!-- Nav -->
-			<nav id="nav">
+			<nav id="nav"
+				style="font-size: 31px !important; margin-top: 1250px; background-color: white;">
 				<ul>
-					<li><a href="index.html">홈</a></li>
-					<li><a href="#">나만의 육아일기</a>
+					<li><a href="index.html">♥홈으로♥</a></li>
+					<li><a href="#">♥아기 용품 공간♥</a>
 						<ul>
 							<li><a href="#">Lorem ipsum dolor</a></li>
 							<li><a href="#">Magna phasellus</a></li>
@@ -78,27 +89,62 @@ video {
 								</ul></li>
 							<li><a href="#">Veroeros feugiat</a></li>
 						</ul></li>
-					<li><a href="left-sidebar.html">Left Sidebar</a></li>
-					<li><a href="right-sidebar.html">Right Sidebar</a></li>
-					<li><a href="no-sidebar.html">No Sidebar</a></li>
+					<li><a href="left-sidebar.html">♥나만의 육아일기♥</a></li>
+					<li><a href="right-sidebar.html">♥이야기 해요♥</a></li>
+					<li><a href="no-sidebar.html">♥나의 아기정보♥</a></li>
 				</ul>
 			</nav>
 
 		</div>
 
+
 		<!-- Banner -->
-		<section id="banner">
+		<section id="banner" style="padding-top: 0px">
 			<header>
-				<h2>
-					Hi. You're looking at <strong>Helios</strong>.
-				</h2>
-				<p>
-					A (free) responsive site template by <a href="http://html5up.net">HTML5
-						UP</a>. Built on <strong>skel</strong> and released under the <a
-						href="http://html5up.net/license">CCA</a> license.
-				</p>
+				<img class="mySlides" src="../baby_picture/picture_main.jpg">
+				<img class="mySlides" src="../baby_picture/baby7.jpg"> <img
+					class="mySlides" src="../baby_picture/picture_main1.jpg"
+					style="display: block; width: 2000px; height: 300px">
+
+				<script type="text/javascript">
+					
+					   var imgs = document.querySelectorAll("img.mySlides");
+					   var index=0;
+					   
+					   slide(index);
+					   
+					   setInterval(() => {
+					      index+=1;
+					      slide(index);
+					   }, 1000);
+					   
+					   
+					   function slide(num) {
+					      //이미지 숨기기
+					      for (var i = 0; i < imgs.length; i++) {
+					         imgs[i].style.display = "none";
+					      }
+					      index += num;
+					      
+					      if(index < 0){
+					         index = imgs.length-1;
+					      }else if(index > imgs.length-1){
+					         index = 0;
+					      }
+					      
+					      //첫 번째 이미지 출력
+					      imgs[index].style.display = "block";
+					   }					
+					</script>
+
+
+
+
+
 			</header>
 		</section>
+
+
 
 		<!-- Carousel -->
 		<section class="carousel">
@@ -227,7 +273,8 @@ video {
 			</div>
 		</section>
 
-		<!-- Main -->
+		<!--  
+		<!-- Main --
 		<div class="wrapper style2">
 
 			<article id="main" class="container special">
@@ -260,7 +307,7 @@ video {
 
 		</div>
 
-		<!-- Features -->
+		<!-- Features --
 		<div class="wrapper style1">
 
 			<section id="features" class="container special">
@@ -314,12 +361,12 @@ video {
 
 		</div>
 
-		<!-- Footer -->
+		<!-- Footer --
 		<div id="footer">
 			<div class="container">
 				<div class="row">
 
-					<!-- Tweets -->
+					<!-- Tweets --
 					<section class="4u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-twitter circled">
@@ -354,7 +401,7 @@ video {
 						</ul>
 					</section>
 
-					<!-- Posts -->
+					<!-- Posts --
 					<section class="4u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-file circled">
@@ -405,7 +452,7 @@ video {
 						</ul>
 					</section>
 
-					<!-- Photos -->
+					<!-- Photos --
 					<section class="4u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-camera circled">
@@ -445,7 +492,7 @@ video {
 				<div class="row">
 					<div class="12u">
 
-						<!-- Contact -->
+						<!-- Contact --
 						<section class="contact">
 							<header>
 								<h3>Nisl turpis nascetur interdum?</h3>
@@ -467,20 +514,20 @@ video {
 										class="label">Linkedin</span></a></li>
 							</ul>
 						</section>
-
-						<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; Untitled. All rights reserved.</li>
-								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
+-->
+		<!-- Copyright -->
+		<div class="copyright">
+			<ul class="menu">
+				<li>&copy; 저작권 : 남진혁 안영만 윤지호 조지영</li>
+				<li>Design: <a href="http://html5up.net">멋있쥬?</a></li>
+			</ul>
 		</div>
+
+	</div>
+
+	</div>
+	</div>
+	</div>
 
 	</div>
 
