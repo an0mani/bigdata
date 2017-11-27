@@ -5,13 +5,9 @@
 <head>
 <style type="text/css">
 	#top {
-		background-color: #FFFFF6;
-	}
-	
-	#div1 {
-		margin-left: 300px;
-		margin-right: 300px;
-		background-color: white;
+		background-image: url("sunflower4.png");
+		background-repeat: no-repeat;
+		font-family: 'a고래야놀자';
 	}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -22,7 +18,7 @@
 <body id="top" background="background.jpg">
 	<section id="three">
 	<p></p>
-	<h1 align="center"><img src="check.png" width="100px" height="100px">Get in Touch</h1>
+	<h1 align="center"><img src="writingicon.png" width="100px" height="100px"></h1>
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
@@ -38,13 +34,13 @@
 						<input type="file" name="file" id="file" placeholder="file" />
 					</div>					
 					<div class="12u$">
-						<textarea name="message" id="message" placeholder="Message" rows="10"></textarea>
+						<textarea name="message" id="message" placeholder="Message" rows="8"></textarea>
+					</div>
+					<div class="12u$">
+						<input type="submit" value="Send Message" />
 					</div>
 				</div>
 			</form>
-			<ul class="actions">
-				<li><input type="submit" value="Send Message" /></li>
-			</ul>
 		</div>
 	</div>
 	</section>
