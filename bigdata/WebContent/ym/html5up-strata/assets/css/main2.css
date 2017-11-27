@@ -1551,7 +1551,7 @@
 /* Basic */
 
 	body {
-		background: #fff;
+		background: url(image/center.jpg) !important;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -2340,10 +2340,11 @@
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
 		min-width: 10em;
-		padding: 0 1.5em;
+		padding: 0 .5em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		margin-bottom: 5px;
 	}
 
 		input[type="submit"]:hover,
@@ -2481,10 +2482,10 @@
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								fixed;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/test.png"), url("../../images/test.png");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								auto 100%;
+		background-size: cover;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2874,7 +2875,7 @@
 
 			#header1 {
 				padding: 6em 3em 3em 3em;
-				width: 30%;
+				width: 20%;
 			}
 
 				#header1 h1 {
@@ -2950,10 +2951,10 @@
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
+				background-image: url("images/test.png"), url("../../images/test.png");
+				background-position: top left,	bottom center;
+				background-repeat: repeat,	no-repeat;
+				background-size: cover;
 				bottom: auto;
 				left: auto;
 				padding: 4em 4em 6em 4em;

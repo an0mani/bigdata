@@ -5,27 +5,56 @@
 <head>
 <style type="text/css">
 	#top {
-		background-color: #FFFFF6;
+	background-image: url(images/center.jpg) !important;
+	font-family: 'a고래야놀자' !important;
 	}
+	#tag{
+	margin-top: 40%;
+	
+	}
+	#back{
+	background-image: url(images/test.png) !important;
+	 
+	}
+	tr{
+	color: black;
+	align-self: center;
+	}
+	
 </style>
 <title>to baby from mom, message board</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumpenscript.css">
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/main2.css" />
 </head>
-<body id="top">
+<body id="top" class="homepage">
+<div id = "back">
 	<header id="header1">
 				<div class="inner1" >
 				
-					<a href="#" class="image avatar"><img src="back_image/baby.jpg" alt="" /></a>
-					<input type = "button" name = "write" value = "글쓰기" onclick="alert('글쓰기');" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">	
-					<input type = "button" name = "menu" value = "메뉴" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: white !important;">
+				
+					<p id= "tag">
+					<a href="#" class="image avatar" style="margin-right: 40px;"><img src="back_image/baby.jpg" alt="" /></a>
+					<table>
+					<tr>
+					<td >??맘</td>
+					</tr>
+					<tr>
+					<td>D+??일</td>
+					</tr>
+					</table>
+					<input type = "button" name = "write" value = "글쓰기" onclick="alert('글쓰기');" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px; font-family: 'a고래야놀자'">	
+					<input type = "button" name = "menu" value = "프로필" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px ; font-family: 'a고래야놀자'">
+					<input type = "button" name = "menu" value = "내글확인" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px; font-family: 'a고래야놀자'">
+					</p>
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
 					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
 				</div>
 			</header>
+		</div>
 	<!-- Header -->
 		<!-- Menu -->
 	<div id="wrapper">
@@ -60,10 +89,11 @@
 	<!-- Logo -->
 	
 	<!-- Main -->
-	<div id="main" style="margin-left: 380px; padding-top: 50px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px;">
+	
+	<div id="main" style="margin-left: 400px;margin-right : 100px; padding-top: 20px; padding-bottom: 20px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px;">
 
 		<!-- One -->
-		<section id="one">
+	<!-- 	<section id="one">
 			<header class="major">
 				<h2>To Baby From Mom.</h2>
 			</header>
@@ -72,7 +102,7 @@
 					<li><a href="writing.jsp" class="button">Message Writing</a></li>
 					<li><a href="#" class="button">Logout</a></li>
 				</ul>
-		</section>
+		</section> -->
 
 		<!-- Two -->
 		<section id="two">
