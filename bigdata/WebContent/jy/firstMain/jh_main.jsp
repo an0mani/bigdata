@@ -6,15 +6,46 @@
 <style>
 video {
 	position: absolute;
-	top: 0px;
+	top: -145px;
 	left: 0px;
 	min-width: 100%;
-	min-height: auto;
+	min-height: 90%;
 	z-index: -1;
 	overflow: hidden;
 	volume: 15%;
+	z-index: -1;
 }
 
+article {
+	margin: 0;
+}
+
+#art_pic {
+	padding: 0 5em 1em 6em;
+	margin: 0;
+}
+
+#art_pic img {
+	width: 70px;
+	height: 70px;
+}
+
+.carousel {
+	background-color: white;
+	font-family: 'a고래야놀자';
+}
+
+.reel {
+	margin-bottom: 90px;
+}
+
+/*
+#backImg{
+	background-image: url("../baby_picture/sunflower4.jpg");
+	background-size: cover;
+
+}
+*/
 #mainfont, #nav {
 	font-family: 'a고래야놀자';
 	font-size: 116px;
@@ -112,7 +143,8 @@ a#login_pop:hover, a#join_pop:hover {
 	height: 55%;
 	background-image: url("../baby_picture/heartTree.png");
 	background-repeat: no-repeat;
-	background-size: cover; border : 3px solid #fff;
+	background-size: cover;
+	border: 3px solid #fff;
 	display: inline-block;
 	left: 50%;
 	opacity: 0;
@@ -215,7 +247,7 @@ a#login_pop:hover, a#join_pop:hover {
 </head>
 <body class="homepage">
 
-<script>
+	<script>
 
 </script>
 </head>
@@ -225,7 +257,6 @@ a#login_pop:hover, a#join_pop:hover {
 		<!-- Header -->
 
 		<div id="header">
-
 			<video autoplay="autoplay" src="baby.mp4" loop="loop"></video>
 			<!-- Inner -->
 			<div class="inner">
@@ -242,6 +273,9 @@ a#login_pop:hover, a#join_pop:hover {
 					id="login_pop" class="button">Login</a>
 				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="#join_form"
 					id="join_pop" class="button">Join</a> </footer>
+
+				<br> <a href="#banner" class="scrolly"
+					style="color: black; font-weight: bold;"> 육아일기 시작! </a>
 
 				<!-- Menu //class="button circled scrolly"으로 창 이동-->
 				<!-- Login버튼 부분 팝업-->
@@ -260,23 +294,22 @@ a#login_pop:hover, a#join_pop:hover {
 					</div>
 					<div style="text-align: center;">
 						<a href="#banner" class="scrolly"><input type="submit"
-							value="로 그 인" onclick="confirmID()"/></a>
+							value="로 그 인" onclick="confirmID()" /></a>
 					</div>
 					<a class="close" href="#close"></a>
 				</div>
-				
-				
+
+
 				<script type="text/javascript">
 				
 					function confirmID(){
 						
 						alert("로그인 성공! 환영합니다!~");
-						popclose.style.display = "none";
 					}
 					
 				</script>
-				
-				
+
+
 				<!-- Join버튼 부분 팝업-->
 				<a href="#x" class="overlay" id="join_form"></a>
 				<div class="popup"
@@ -365,22 +398,27 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 
+
 		<section>
-		<div id = "banner" style="padding-top: 0px;display:none; position: relative;"> <header>
-		<img class="mySlides" src="../baby_picture/picture_main.jpg" style="position: absolute;"> 
-		
-		<img class="mySlides" src="../baby_picture/picture_main1.jpg" style="position: absolute;display: block; width: 2000px; height: 300px"> 
+		<div id="banner"
+			style="padding-top: 0px; display: none; position: relative;">
+			<header> <img class="mySlides"
+				src="../baby_picture/picture_main.jpg" style="position: absolute;">
+
+			<img class="mySlides" src="../baby_picture/picture_main1.jpg"
+				style="position: absolute; display: block; width: 2000px; height: 300px">
 		</div>
-		<div id = "banner2" style="padding-top: 0px;display:none; position: relative;">
-		<img class="mySlides2" src="../baby_picture/picture_main.jpg"style="position: absolute;"> 
-		
-		<img class="mySlides2" src="../baby_picture/picture_main1.jpg" style="display: block; width: 2000px; height: 300px"> 
+		<div id="banner2"
+			style="padding-top: 0px; display: none; position: relative;">
+			<img class="mySlides2" src="../baby_picture/picture_main.jpg"
+				style="position: absolute;"> <img class="mySlides2"
+				src="../baby_picture/picture_main1.jpg"
+				style="display: block; width: 2000px; height: 300px">
 		</div>
 		<script src="//code.jquery.com/jquery.min.js">
 
 		   
-		</script>
-		<script>
+		</script> <script>
 					
 					   var imgs = document.querySelectorAll("img.mySlides");
 					   var imgs2 = document.querySelectorAll("img.mySlides2");
@@ -393,14 +431,14 @@ a#login_pop:hover, a#join_pop:hover {
 					   setInterval(() => {
 					      index+=1;
 					      slide(index);
-					      $("#banner").fadeIn(1500);
-					      $("#banner").fadeOut(1500);
-					   }, 3000);
+					      $("#banner").fadeIn(3000);
+					      $("#banner").fadeOut(3000);
+					   }, 6000);
 					   setInterval(() => {
 					    
-					      $("#banner2").fadeOut(1500);
-					      $("#banner2").fadeIn(1500);
-					   }, 3000);
+					      $("#banner2").fadeOut(3000);
+					      $("#banner2").fadeIn(3000);
+					   }, 6000);
 
 					      
 					      
@@ -436,103 +474,61 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 		<!-- Carousel -->
-		<section class="carousel">
-		<div class="reel">
+		<div id="backImg">
+			<section class="carousel">
+			<div class="reel">
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic01.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Pulvinar sagittis congue</a>
-			</h3>
-			</header>
-			<p >Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article> <a href="#" class="image featured"></a> <header>
+				<h2>
+					<a href="../Notice/Notice.jsp">공지 사항</a>
+				</h2>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+				</article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic02.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Fermentum sagittis proin</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article id="art_pic"> <a href="#" class="image featured"><img
+					src="images/sun_icon1.png" alt="" /></a> </article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic03.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Sed quis rhoncus placerat</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article> <a href="#" class="image featured"></a> <header>
+				<h2>
+					<a href="../DaycareCenter/jy_DaycareCenter.jsp">안전한 어린이집</a>
+				</h2>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+				</article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic04.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Ultrices urna sit lobortis</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article id="art_pic"> <a href="#" class="image featured"><img
+					src="images/sun_icon1.png" alt="" /></a> </article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic05.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Varius magnis sollicitudin</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article> <a href="#" class="image featured"></a> <header>
+				<h2>
+					<a href="../news/news.jsp">육아 News</a>
+				</h2>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+				</article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic01.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Pulvinar sagittis congue</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article id="art_pic"> <a href="#" class="image featured"><img
+					src="images/sun_icon1.png" alt="" /></a> </article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic02.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Fermentum sagittis proin</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article> <a href="#" class="image featured"></a> <header>
+				<h2>
+					<a href="../dicrease/dicrease.jsp">질병 랭킹 순위</a>
+				</h2>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+				</article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic03.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Sed quis rhoncus placerat</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
+				<article id="art_pic"> <a href="#" class="image featured"><img
+					src="images/sun_icon1.png" alt="" /></a> </article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic04.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Ultrices urna sit lobortis</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
 
-			<article> <a href="#" class="image featured"><img
-				src="images/pic05.jpg" alt="" /></a> <header>
-			<h3>
-				<a href="#">Varius magnis sollicitudin</a>
-			</h3>
-			</header>
-			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-			</article>
 
-		</div>
-		</section>
-
-		<!--  
+				<!--  
 		<!-- Main --
 		<div class="wrapper style2">
 
@@ -774,20 +770,10 @@ a#login_pop:hover, a#join_pop:hover {
 							</ul>
 						</section>
 -->
-		<!-- Copyright -->
-		<div class="copyright">
-			<ul class="menu">
-				<li>&copy; 저작권 : 남진혁 안영만 윤지호 조지영</li>
-				<li>Design: <a href="http://html5up.net">멋있쥬?</a></li>
-			</ul>
+				<!-- Copyright -->
+			</div>
 		</div>
-
-	</div>
-
-	</div>
-	</div>
-	</div>
-
+		</section>
 	</div>
 
 	<!-- Scripts -->
