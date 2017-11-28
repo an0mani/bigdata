@@ -5,134 +5,125 @@
 <head>
 <style type="text/css">
 	#top {
-		background-image: url("messageboardflower.png");
-		background-repeat: no-repeat;
-		font-family: 'a고래야놀자';
-		font-size: x-large;
-	}
-	
-	#two > h3 {
-		font-size: 35px;
-	}
-	
-	#two > .row > .6u 12u$(xsmall) work-item {
-		width: 33% !important;
+		background-color: #FFFFF6;
 	}
 </style>
 <title>to baby from mom, message board</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/main2.css" />
 </head>
 <body id="top">
 
+	<!-- Header -->
+		<!-- Menu -->
 	<div id="wrapper">
-		<!-- Header -->
-		<header id="header">
-		<div class="inner">
 
-			<!-- Logo -->
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-			<!-- Nav -->
-			<nav>
-			<ul>
-				<li><a href="#menu">Menu</a></li>
-			</ul>
-			</nav>
+							<!-- Logo -->
+							
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-		</div>
-		</header>
-		<nav id="menu">
-		<h2>Menu</h2>
-		<ul>
-			<li><a href="index.html">홈페이지</a></li>
-			<li><a href="generic.html">아기용품공간</a></li>
-			<li><a href="generic.html">나만의 육아일기</a></li>
-			<li><a href="generic.html">이야기해요</a></li>
-			<li><a href="elements.html">나의 아기정보</a></li>
-			<li><a href="elements.html">로그아웃</a></li>
-		</ul>
-		</nav>
+						</div>
+					</header>
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
 
-	</div>
+			</div>
 	<!-- Logo -->
-
+	
 	<!-- Main -->
-	<div id="main"
-		style="/* margin-left: 380px; */ padding-top: 0px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px; margin-left: 300px; margin-right: 300px;">
+	<div id="main" style="margin-left: 380px; padding-top: 50px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px;">
 
 		<!-- One -->
-		<section id="one"> <header class="major">
-		<h1 style="font-size: 80px; color: #4C4C4C;">To Baby From Mom.</h1>
-		</header>
-		<p>회원님들의 소통페이지 입니다. 여러분의 소중한 추억과 아기의 자랑거리를 공유해주세요.</p>
-		<ul class="actions">
-			<li><a href="writing.jsp" class="button">Message Writing</a></li>
-		</ul>
+		<section id="one">
+			<header class="major">
+				<h2>To Baby From Mom.</h2>
+			</header>
+			<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+				<ul class="actions">
+					<li><a href="writing.jsp" class="button">Message Writing</a></li>
+					<li><a href="#" class="button">Logout</a></li>
+				</ul>
 		</section>
 
 		<!-- Two -->
 		<section id="two">
 		<h2>Album</h2>
 		<div class="row">
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Magna sed consequat tempus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Magna sed consequat tempus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u$ 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Quam neque phasellus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Magna sed consequat tempus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Magna sed consequat tempus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u$ 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Ultricies lacinia interdum</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Tortor metus commodo</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Nunc enim commodo aliquet</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item" style="width: 33% !important;"> <a
+			<article class="6u$ 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
 				src="images/thumbs/baby.jpg" alt="" /></a>
 			<h3>Quam neque phasellus</h3>
 			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-
-
-
+			
+		
+			
 		</div>
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
@@ -515,9 +506,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</footer> -->
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.onvisible.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.poptrox.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
