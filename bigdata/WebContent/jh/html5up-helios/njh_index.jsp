@@ -9,13 +9,14 @@ video {
 	top: -145px;
 	left: 0px;
 	min-width: 100%;
-	min-height: 90%; z-index : -1;
+	min-height: 90%;
+	z-index: -1;
 	overflow: hidden;
 	volume: 15%;
 	z-index: -1;
 }
 
-article{
+article {
 	margin: 0;
 }
 
@@ -24,17 +25,17 @@ article{
 	margin: 0;
 }
 
-#art_pic img{
+#art_pic img {
 	width: 70px;
 	height: 70px;
 }
 
-.carousel{
+.carousel {
 	background-color: white;
 	font-family: 'a고래야놀자';
 }
 
-.reel{
+.reel {
 	margin-bottom: 90px;
 }
 
@@ -371,19 +372,24 @@ a#login_pop:hover, a#join_pop:hover {
 			<nav id="nav"
 				style="font-size: 31px !important; margin-top: 1250px; background-color: white;">
 			<ul>
-				<li><a href="njh_index.jsp"><img src="images/sun.png">Home<img src="images/sun.png"></a></li>
-				<li><a href="#"><img src="images/sun.png">아기 용품 공간<img src="images/sun.png"></a>
+				<li><a href="njh_index.jsp"><img src="images/sun.png">Home<img
+						src="images/sun.png"></a></li>
+				<li><a href="#"><img src="images/sun.png">아기 용품 공간<img
+						src="images/sun.png"></a>
 					<ul>
 						<li><a href="#">♥아나바다!</a></li>
 						<li><a href="#">♥물품 구매 홈페이지</a></li>
 					</ul></li>
-				<li><a href="left-sidebar.html"><img src="images/sun.png">나만의 육아일기<img src="images/sun.png"></a></li>
-				<li><a href="#"><img src="images/sun.png">이야기 해요<img src="images/sun.png"></a>
+				<li><a href="left-sidebar.html"><img src="images/sun.png">나만의
+						육아일기<img src="images/sun.png"></a></li>
+				<li><a href="#"><img src="images/sun.png">이야기 해요<img
+						src="images/sun.png"></a>
 					<ul>
 						<li><a href="#">♥아나바다!</a></li>
 						<li><a href="#">♥물품 구매 홈페이지</a></li>
 					</ul></li>
-				<li><a href="no-sidebar.html"><img src="images/sun.png">나의 아기정보<img src="images/sun.png"></a></li>
+				<li><a href="no-sidebar.html"><img src="images/sun.png">나의
+						아기정보<img src="images/sun.png"></a></li>
 			</ul>
 			</nav>
 
@@ -477,8 +483,10 @@ a#login_pop:hover, a#join_pop:hover {
 			<div class="reel">
 
 				<article> <a href="#" class="image featured"></a> <header>
-					<h2>
-					<a href="#">공지 사항</a> </h2></header>
+				<h2>
+					<a href="#">공지 사항</a>
+				</h2>
+				</header>
 				<p>Commodo id natoque malesuada sollicitudin elit suscipit
 					magna.</p>
 				</article>
