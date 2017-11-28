@@ -1592,7 +1592,7 @@ form label {
 form input[type="text"], form input[type="email"], form input[type="password"],
 	form select, form textarea {
 	-webkit-appearance: none;
-	display: block;
+	display: inline;
 	border: 0;
 	background: #fafafa;
 	width: 100%;

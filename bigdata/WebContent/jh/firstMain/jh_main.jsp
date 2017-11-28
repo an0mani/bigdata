@@ -16,6 +16,11 @@ video {
 	z-index: -1;
 }
 
+#checkId{
+	padding: 0;
+	font-family: 'a각설탕';
+}
+
 article {
 	margin: 0;
 }
@@ -252,10 +257,9 @@ a#login_pop:hover, a#join_pop:hover {
 </script>
 </head>
 <body>
+
 	<div id="page-wrapper">
-
 		<!-- Header -->
-
 		<div id="header">
 			<video autoplay="autoplay" src="baby.mp4" loop="loop"></video>
 			<!-- Inner -->
@@ -311,60 +315,64 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 				<!-- Join버튼 부분 팝업-->
-				<a href="#x" class="overlay" id="join_form"></a>
-				<div class="popup"
-					style="text-align: center; width: 39%; height: 75%;">
-					<h2>회원가입</h2>
-					<p style="text-align: center">소중한 정보를 입력해주세요!!!</p>
-					<div>
-						<label for="email"> 아이디 입력 : </label> : <input type="text" id="id"
-							placeholder="영문,숫자 6자 이상 입력해주세요" size="30px">
-					</div>
-					<div>
-						<label for="pass">비밀번호 입력: </label> : <input type="password"
-							id="pass" placeholder="암호는 소중히!" size="30px" />
-					</div>
-					<div>
-						<label>애기 이름</label> : <input type="text" id="firstname"
-							placeholder="성은 제외" size="10px" /> 성 별 : ♂<input type="radio"
-							name="gender">♀<input type="radio" name="gender">
-					</div>
-					<div>
-						<label for="lastname">핸드폰 번호</label> : <input type="text"
-							id="lastname" placeholder="'-'없이 입력해주세요" size="30px" />
-					</div>
-					<div>
-						<label for="lastname">혈 액 형</label> : <input type="text"
-							id="lastname" placeholder="'알파벳만" size="30px" />
-					</div>
-					<div>
-						<label for="lastname">체 중</label> : <input type="text"
-							id="lastname" placeholder="'kg'없이 입력해주세요" size="30px" />
-					</div>
-					<div>
-						<label for="lastname">신 장</label> : <input type="text"
-							id="lastname" placeholder="'cm'없이 입력해주세요" size="30px" />
-					</div>
-					<div>
-						<label for="lastname">태어난 날짜</label>&nbsp:&nbsp&nbsp&nbsp&nbsp
-						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input
-							type="date" id="lastname" placeholder="'-'없이 입력해주세요" size="30px" />
-					</div>
-					<a href="index.jsp"> <input type="submit" value="회원가입"
-						onclick="showJoin()"></a>&nbsp or &nbsp <a href="#login_form"
-						id="login_pop"><input type="reset" value="초기화"></a> <a
-						class="close" href="#close"></a>
-				</div>
-
-				<script type="text/javascript">
 				
-					function showJoin(){
-						
-						alert("누구누구님! 가입을 축하드립니다!");
-						
-					}
-					
-				</script>
+            <!-- Join버튼 부분 팝업-->
+            <form >
+            <a href="#x" class="overlay" id="join_form"></a>
+            <div class="popup"
+               style="width: 39%; height: 75%; text-align: left;">
+               <h2>회원가입</h2>
+               <p style="text-align: center">소중한 정보를 입력해주세요!!!</p>
+               <div>
+                  아이디 입력: <input type="text" id="id"
+                     placeholder="영문,숫자 6자 이상 입력해주세요" size="30px" style="width: 50%;">
+                     <input type="button" id="checkId" style="height: 30px; width: 70px;" value="중복확인">
+               </div>
+               <div>
+                  비밀번호 입력: <input type="password"
+                     id="pass" placeholder="암호는 소중히!" size="30px"  style="width: 50%;"/>
+               </div>
+               <div>
+                  애기 이름 : <input type="text" id="firstname"
+                     placeholder="성은 제외" size="10px"  style="width: 50%;"/> 성 별 : ♂<input type="radio"
+                     name="gender">♀<input type="radio" name="gender">
+               </div>
+               <div>
+                  핸드폰 번호 : <input type="text"
+                     id="lastname" placeholder="'-'없이 입력해주세요" size="30px"  style="width: 50%;"/>
+               </div>
+               <div>
+                  혈 액 형 : <input type="text"
+                     id="lastname" placeholder="'알파벳만" size="30px"  style="width: 50%;"/>
+               </div>
+               <div>
+                  체 중 : <input type="text"
+                     id="lastname" placeholder="'kg'없이 입력해주세요" size="30px"  style="width: 50%;"/>
+               </div>
+               <div>
+                  신 장 : <input type="text"
+                     id="lastname" placeholder="'cm'없이 입력해주세요" size="30px"  style="width: 50%;"/>
+               </div>
+               <div>
+                  태어난 날짜&nbsp:&nbsp&nbsp <input
+                     type="date" id="lastname" placeholder="'-'없이 입력해주세요" size="30px" />
+               </div>
+               <a href="index.jsp">&nbsp&nbsp&nbsp <input type="submit" value="회원가입"
+                  onclick="showJoin()"></a>&nbsp or &nbsp <a href="#login_form"
+                  id="login_pop"><input type="reset" value="초기화"></a> <a
+                  class="close" href="#close"></a>
+            </div>
+
+            <script type="text/javascript">
+            
+               function showJoin(){
+                  
+                  alert("누구누구님! 가입을 축하드립니다!");
+                  
+               }
+               
+            </script>
+</form>
 
 			</div>
 
@@ -530,6 +538,14 @@ a#login_pop:hover, a#join_pop:hover {
 				<article id="art_pic"> <a href="#" class="image featured"><img
 					src="images/sun_icon1.png" alt="" /></a> </article>
 
+				<article> <a href="#" class="image featured"></a> <header>
+				<h2>
+					<a href="#">예방 접종 자료</a>
+				</h2>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+				</article>
 
 
 				<!--  
