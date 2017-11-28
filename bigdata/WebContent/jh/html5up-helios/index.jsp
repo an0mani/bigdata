@@ -112,7 +112,8 @@ a#login_pop:hover, a#join_pop:hover {
 	height: 55%;
 	background-image: url("../baby_picture/heartTree.png");
 	background-repeat: no-repeat;
-	background-size: cover; border : 3px solid #fff;
+	background-size: cover;
+	border: 3px solid #fff;
 	display: inline-block;
 	left: 50%;
 	opacity: 0;
@@ -215,7 +216,7 @@ a#login_pop:hover, a#join_pop:hover {
 </head>
 <body class="homepage">
 
-<script>
+	<script>
 
 </script>
 </head>
@@ -243,6 +244,9 @@ a#login_pop:hover, a#join_pop:hover {
 				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="#join_form"
 					id="join_pop" class="button">Join</a> </footer>
 
+				<br> <a href="#banner" class="scrolly"
+					style="color: black; font-weight: bold;"> 육아일기 시작! </a>
+
 				<!-- Menu //class="button circled scrolly"으로 창 이동-->
 				<!-- Login버튼 부분 팝업-->
 				<a href="#x" class="overlay" id="login_form"></a>
@@ -260,23 +264,22 @@ a#login_pop:hover, a#join_pop:hover {
 					</div>
 					<div style="text-align: center;">
 						<a href="#banner" class="scrolly"><input type="submit"
-							value="로 그 인" onclick="confirmID()"/></a>
+							value="로 그 인" onclick="confirmID()" /></a>
 					</div>
 					<a class="close" href="#close"></a>
 				</div>
-				
-				
+
+
 				<script type="text/javascript">
 				
 					function confirmID(){
 						
 						alert("로그인 성공! 환영합니다!~");
-						popclose.style.display = "none";
 					}
 					
 				</script>
-				
-				
+
+
 				<!-- Join버튼 부분 팝업-->
 				<a href="#x" class="overlay" id="join_form"></a>
 				<div class="popup"
@@ -361,16 +364,16 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 
-		<section id="banner" style="padding-top: 0px;display:none;"> <header>
-		<img class="mySlides" src="../baby_picture/picture_main.jpg"> 
-		<img class="mySlides" src="../baby_picture/baby7.jpg"> 
-		<img class="mySlides" src="../baby_picture/picture_main1.jpg" style="display: block; width: 2000px; height: 300px"> 
-		
-		<script src="//code.jquery.com/jquery.min.js">
+		<section id="banner" style="padding-top: 0px;display:none;">
+		<header> <img class="mySlides"
+			src="../baby_picture/picture_main.jpg"> <img class="mySlides"
+			src="../baby_picture/baby7.jpg"> <img class="mySlides"
+			src="../baby_picture/picture_main1.jpg"
+			style="display: block; width: 2000px; height: 300px"> <script
+			src="//code.jquery.com/jquery.min.js">
 
 		   
-		</script>
-		<script>
+		</script> <script>
 					
 					   var imgs = document.querySelectorAll("img.mySlides");
 					   var banner = document.getElementById("banner");
@@ -418,7 +421,7 @@ a#login_pop:hover, a#join_pop:hover {
 
 		<!-- Carousel -->
 		<section class="carousel">
-		<div class="reel">
+		<div class="reel" style="background-color: white">
 
 			<article> <a href="#" class="image featured"><img
 				src="images/pic01.jpg" alt="" /></a> <header>
@@ -426,7 +429,8 @@ a#login_pop:hover, a#join_pop:hover {
 				<a href="#">Pulvinar sagittis congue</a>
 			</h3>
 			</header>
-			<p >Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+			<p>Commodo id natoque malesuada sollicitudin elit suscipit
+				magna.</p>
 			</article>
 
 			<article> <a href="#" class="image featured"><img
@@ -510,10 +514,9 @@ a#login_pop:hover, a#join_pop:hover {
 			<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
 			</article>
 
-		</div>
-		</section>
 
-		<!--  
+
+			<!--  
 		<!-- Main --
 		<div class="wrapper style2">
 
@@ -755,15 +758,17 @@ a#login_pop:hover, a#join_pop:hover {
 							</ul>
 						</section>
 -->
-		<!-- Copyright -->
-		<div class="copyright">
-			<ul class="menu">
-				<li>&copy; 저작권 : 남진혁 안영만 윤지호 조지영</li>
-				<li>Design: <a href="http://html5up.net">멋있쥬?</a></li>
-			</ul>
-		</div>
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; 저작권 : 남진혁 안영만 윤지호 조지영</li>
+					<li>Design: <a href="http://html5up.net">멋있쥬?</a></li>
+				</ul>
+			</div>
 
+		</div>
 	</div>
+	</section>
 
 	</div>
 	</div>
