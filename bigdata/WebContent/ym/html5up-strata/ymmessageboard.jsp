@@ -7,6 +7,7 @@
 	#top {
 	background-image: url(images/center.jpg) !important;
 	font-family: 'a고래야놀자' !important;
+	
 	}
 	#tag{
 	margin-top: 40%;
@@ -19,6 +20,9 @@
 	tr{
 	color: black;
 	align-self: center;
+	}
+	#two{
+	width:115%;
 	}
 	
 </style>
