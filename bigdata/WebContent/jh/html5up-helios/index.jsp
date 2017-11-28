@@ -360,12 +360,17 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 
-
-		<section id="banner" style="padding-top: 0px;display:none;"> <header>
-		<img class="mySlides" src="../baby_picture/picture_main.jpg"> 
-		<img class="mySlides" src="../baby_picture/baby7.jpg"> 
-		<img class="mySlides" src="../baby_picture/picture_main1.jpg" style="display: block; width: 2000px; height: 300px"> 
+		<section>
+		<div id = "banner" style="padding-top: 0px;display:none; position: relative;"> <header>
+		<img class="mySlides" src="../baby_picture/picture_main.jpg" style="position: absolute;"> 
 		
+		<img class="mySlides" src="../baby_picture/picture_main1.jpg" style="position: absolute;display: block; width: 2000px; height: 300px"> 
+		</div>
+		<div id = "banner2" style="padding-top: 0px;display:none; position: relative;">
+		<img class="mySlides2" src="../baby_picture/picture_main.jpg"style="position: absolute;"> 
+		
+		<img class="mySlides2" src="../baby_picture/picture_main1.jpg" style="display: block; width: 2000px; height: 300px"> 
+		</div>
 		<script src="//code.jquery.com/jquery.min.js">
 
 		   
@@ -373,7 +378,9 @@ a#login_pop:hover, a#join_pop:hover {
 		<script>
 					
 					   var imgs = document.querySelectorAll("img.mySlides");
+					   var imgs2 = document.querySelectorAll("img.mySlides2");
 					   var banner = document.getElementById("banner");
+					   var banner2 = document.getElementById("banner2");
 					   var index=0;
 					   
 					   slide(index);
@@ -381,9 +388,14 @@ a#login_pop:hover, a#join_pop:hover {
 					   setInterval(() => {
 					      index+=1;
 					      slide(index);
-					      $("#banner").fadeIn(1000);
-					      $("#banner").fadeOut(1000);
-					   }, 2000);
+					      $("#banner").fadeIn(1500);
+					      $("#banner").fadeOut(1500);
+					   }, 3000);
+					   setInterval(() => {
+					    
+					      $("#banner2").fadeOut(1500);
+					      $("#banner2").fadeIn(1500);
+					   }, 3000);
 
 					      
 					      
@@ -393,6 +405,7 @@ a#login_pop:hover, a#join_pop:hover {
 					      //이미지 숨기기
 					      for (var i = 0; i < imgs.length; i++) {
 					         imgs[i].style.display = "none";
+					         imgs2[i].style.display = "block";
 					         
 					      }
 					      index += num;
@@ -405,6 +418,7 @@ a#login_pop:hover, a#join_pop:hover {
 					      
 					      //첫 번째 이미지 출력
 					      imgs[index].style.display = "block";
+					      imgs2[index].style.display = "none";
 					     
 					   }	
 					   
@@ -412,7 +426,7 @@ a#login_pop:hover, a#join_pop:hover {
 
 					   
 					   
-					</script> </header> </section>
+					</script> </header></section>
 
 
 
