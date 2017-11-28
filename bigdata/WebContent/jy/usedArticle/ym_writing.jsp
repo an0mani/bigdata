@@ -19,7 +19,7 @@
 <body id="top">
 	<section id="three">
 	<p></p>
-	<h1 align="center"><img src="writingicon.png" width="100px" height="100px"></h1>
+	<h1 align="center"><img src="writingicon.png" width="500px" height="200px"></h1>
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">

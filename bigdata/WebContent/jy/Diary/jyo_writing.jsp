@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html style = "margin-top: 0px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;height: 800px;padding-top: 150px;">
+<html style = "margin-top: 0px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;height: 800px;">
 <head>
 <style type="text/css">
 	#top {
@@ -18,7 +18,7 @@
 <body id="top">
 	<section id="three">
 	<p></p>
-	<!-- <h1 align="center"><img src="writingicon.png" width="100px" height="100px"></h1> -->
+	<h1 align="center"><img src="writingicon.png" width="500px" height="200px"></h1>
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">

@@ -99,7 +99,7 @@
 
 		<!-- Two -->
 		<section id="two" style = "border-top-width: 0px; margin-top: 0px; padding-top: 50px;">
-		<h2>Album</h2>
+		<h2>¿∞æ∆¿œ±‚</h2>
 		<div class="row">
 			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img

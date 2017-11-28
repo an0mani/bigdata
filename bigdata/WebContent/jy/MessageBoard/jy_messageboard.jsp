@@ -97,7 +97,7 @@
 
 		<!-- Two -->
 		<section id="two">
-		<h2>Album</h2>
+		<h2>게시판/소통해요</h2>
 		<div class="row">
 			<article class="6u 12u$(xsmall) work-item"> <a
 				href="images/fulls/baby.jpg" class="image fit thumb"><img
