@@ -23,25 +23,27 @@
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
-			<form method="post" action="#">
+			<form method="post" action="../../UploadService" enctype="multipart/form-data">
 				<div class="row uniform 50%">
+				
 					<div class="6u 12u$(xsmall)">
 						<input type="text" name="title" id="title" placeholder="title" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>
 					<div class="6u$ 12u$(xsmall)">
-						<input type="text" name="name" id="name" placeholder="name" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
+						<input type="date" name="date" id="date" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
 					</div>			
 					<div class="6u$ 12u$(xsmall)">
 						<input type="file" name="file" id="file" placeholder="file"  style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>					
 					<div class="12u$">
-						<textarea name="message" id="message" placeholder="Message" rows="8" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" ></textarea>
+						<textarea name="text" id="text" placeholder="text" rows="8" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" ></textarea>
 					</div>
 					<div class="12u$">
 						<input type="submit" value="Send Message" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
 						<input type="button" value="Previous page" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
 					</div>
 				</div>
+				
 			</form>
 		</div>
 	</div>
