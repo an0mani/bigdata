@@ -16,7 +16,17 @@ video {
 	z-index: -1;
 }
 
-#checkId{
+.popup {
+	font-size: 31px;
+	font-weight: bold;
+}
+
+#sexFont {
+	font-size: 31px;
+	font-weight: bold;
+}
+
+#checkId {
 	padding: 0;
 	font-family: 'a각설탕';
 }
@@ -150,7 +160,7 @@ a#login_pop:hover, a#join_pop:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 3px solid #fff;
-	display: inline-block;
+	display: inline;
 	left: 50%;
 	opacity: 0;
 	padding: 15px;
@@ -242,12 +252,14 @@ a#login_pop:hover, a#join_pop:hover {
 	border-color: #555 #888 #888;
 }
 </style>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="assets/css/main.css" />
-
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">google.load("jquery", "1.7.1");</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body class="homepage">
@@ -273,106 +285,201 @@ a#login_pop:hover, a#join_pop:hover {
 				<hr />
 
 				</header>
-				<footer id="LoginForm"> <a href="#login_form"
-					id="login_pop" class="button">Login</a>
-				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="#join_form"
-					id="join_pop" class="button">Join</a> </footer>
 
-				<br> <a href="#banner" class="scrolly"
-					style="color: black; font-weight: bold;"> 육아일기 시작! </a>
+				<c:choose>
+					<c:when test="${empty id}">
+						<footer id="LoginForm"> <a href="#login_form"
+							id="login_pop" class="button">Login</a>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="#join_form"
+							id="join_pop" class="button">Join</a> </footer>
+
+						<br>
+					</c:when>
+					<c:otherwise>
+						<div style="margin-right: 10%;">
+							<a href="#banner" class="scrolly"
+								style="color: black; font-weight: bold; font-size: 41px; font-family: 'a고래야놀자'; "> 육아일기 시작! </a>
+						</div>
+					</c:otherwise>
+				</c:choose>
+
+
 
 				<!-- Menu //class="button circled scrolly"으로 창 이동-->
 				<!-- Login버튼 부분 팝업-->
-				<a href="#x" class="overlay" id="login_form"></a>
-				<div class="popup" id="popclose">
-					<h2>들어가기전 준비단계!</h2>
-					<br>
-					<p>아이디와 패스워드를 입력해주세요</p>
-					<div>
-						<label for="login">&nbsp&nbsp 아 이 디</label> : <input type="text"
-							id="login" value="" />
-					</div>
-					<div>
-						<label for="password">&nbsp 비 밀 번 호</label> : <input
-							type="password" id="password" value="" />
-					</div>
-					<div style="text-align: center;">
-						<a href="#banner" class="scrolly"><input type="submit"
-							value="로 그 인" onclick="confirmID()" /></a>
-					</div>
-					<a class="close" href="#close"></a>
-				</div>
+				<form action="../../LoginCheck" method="post">
+					<a href="#x" class="overlay" id="login_form"></a>
+					<div class="popup" id="popclose"
+						style="font-weight: bold; font-size: 19px; width: 36%; height: 60%;">
 
+
+						<c:choose>
+							<c:when test="${empty search_id }">
+								<h2>들어가기전 준비단계!</h2>
+							</c:when>
+
+							<c:otherwise>
+								<h2>다음에는 잊어버리지 말기~!</h2>
+							</c:otherwise>
+						</c:choose>
+
+						<br>
+						<p style="font-weight: bold; font-size: 26px;">아이디와 패스워드를
+							입력해주세요!</p>
+						<div style="font-weight: bold; font-size: 26px;">
+
+							아 이 디 :<br>
+
+							<c:choose>
+								<c:when test="">
+									<input type="text" id="login" name="Login_id" placeholder="ID"
+										style="width: 30%; font-size: 19px;" />
+								</c:when>
+
+								<c:otherwise>
+
+									<input type="text" id="login" name="Login_id"
+										value="${search_id }" style="width: 30%; font-size: 19px;" />
+
+								</c:otherwise>
+
+							</c:choose>
+						</div>
+
+						<div style="font-weight: bold; font-size: 26px;">
+							비 밀 번 호 :<br>
+							<c:choose>
+								<c:when test="">
+									<input type="password" id="password" name="Login_pw"
+										placeholder="password" style="width: 30%;" />
+								</c:when>
+								<c:otherwise>
+									<input type="text" id="password" name="Login_pw"
+										value="${search_pw }" style="width: 30%;" />
+								</c:otherwise>
+							</c:choose>
+						</div>
+						<a href="#check_form" style="font-size: 26px;">아이디 / 비밀번호 찾기</a>
+						<div style="text-align: center;">
+
+
+							<input type="submit" value="로 그 인"
+								style="border-radius: 100%; font-family: 'a각설탕'; margin-right: 301px; font-size: 26px;" />
+							<a class="close" href="#close"></a>
+						</div>
+					</div>
+				</form>
+
+				<!-- 아이디 비밀번호 찾기 팝업 -->
+				<form action="../../SearchInfo">
+					<a href="#x" class="overlay" id="check_form"></a>
+					<div class="popup" id="popclose"
+						style="font-weight: bold; font-size: 19px; width: 26%; height: 31%;">
+						<h2></h2>
+						<br>
+						<p style="font-weight: bold; font-size: 26px;">핸드폰 번호를 입력해주세요!</p>
+						<div style="font-weight: bold; font-size: 26px;">
+							핸드폰 번호 :<br> <input type="text" name="searchId_phone"
+								placeholder="phone-number" style="width: 30%; font-size: 19px;" />
+						</div>
+						<input type="submit" value="찾 기" onclick="showAlert()"
+							style="border-radius: 100%; font-family: 'a각설탕'; margin-right: 260px" /></a>
+					</div>
+				</form>
 
 				<script type="text/javascript">
 				
-					function confirmID(){
-						
-						alert("로그인 성공! 환영합니다!~");
+					function showAlert(){
+						alert("확인 해보세요♥")
 					}
-					
 				</script>
 
 
 				<!-- Join버튼 부분 팝업-->
-				
-            <!-- Join버튼 부분 팝업-->
-            <form >
-            <a href="#x" class="overlay" id="join_form"></a>
-            <div class="popup"
-               style="width: 39%; height: 75%; text-align: left;">
-               <h2>회원가입</h2>
-               <p style="text-align: center">소중한 정보를 입력해주세요!!!</p>
-               <div>
-                  아이디 입력: <input type="text" id="id"
-                     placeholder="영문,숫자 6자 이상 입력해주세요" size="30px" style="width: 50%;">
-                     <input type="button" id="checkId" style="height: 30px; width: 70px;" value="중복확인">
-               </div>
-               <div>
-                  비밀번호 입력: <input type="password"
-                     id="pass" placeholder="암호는 소중히!" size="30px"  style="width: 50%;"/>
-               </div>
-               <div>
-                  애기 이름 : <input type="text" id="firstname"
-                     placeholder="성은 제외" size="10px"  style="width: 50%;"/> 성 별 : ♂<input type="radio"
-                     name="gender">♀<input type="radio" name="gender">
-               </div>
-               <div>
-                  핸드폰 번호 : <input type="text"
-                     id="lastname" placeholder="'-'없이 입력해주세요" size="30px"  style="width: 50%;"/>
-               </div>
-               <div>
-                  혈 액 형 : <input type="text"
-                     id="lastname" placeholder="'알파벳만" size="30px"  style="width: 50%;"/>
-               </div>
-               <div>
-                  체 중 : <input type="text"
-                     id="lastname" placeholder="'kg'없이 입력해주세요" size="30px"  style="width: 50%;"/>
-               </div>
-               <div>
-                  신 장 : <input type="text"
-                     id="lastname" placeholder="'cm'없이 입력해주세요" size="30px"  style="width: 50%;"/>
-               </div>
-               <div>
-                  태어난 날짜&nbsp:&nbsp&nbsp <input
-                     type="date" id="lastname" placeholder="'-'없이 입력해주세요" size="30px" />
-               </div>
-               <a href="index.jsp">&nbsp&nbsp&nbsp <input type="submit" value="회원가입"
-                  onclick="showJoin()"></a>&nbsp or &nbsp <a href="#login_form"
-                  id="login_pop"><input type="reset" value="초기화"></a> <a
-                  class="close" href="#close"></a>
-            </div>
+				<form action="../../JoinCheck" method="post">
+					<a href="#x" class="overlay" id="join_form"></a>
+					<div class="popup"
+						style="width: 39%; height: 70%; text-align: left;">
+						<h2>회원가입</h2>
+						<p>소중한 정보를 입력해주세요!!!</p>
+						<div>
+							아이디 입력: &nbsp<input type="text" id="id" name="id"
+								placeholder="영문,숫자 6~10자 입력" required
+								style="width: 30%; font-size: 19px;"> <input
+								type="button" id="checkId" onclick="idcheck()"
+								style="height: 30px; width: 70px;" value="중복확인"> <br>
+							<span id="result" style="font-weight: bold; color: red;"></span>
+						</div>
 
-            <script type="text/javascript">
+						<div>
+							비밀번호 입력:<input type="password" name="password" id="pass"
+								placeholder="암호는 소중히!" size="30px"
+								style="width: 30%; font-size: 19px;" />
+						</div>
+						<div id="sexFont">
+							애기 이름 : <input type="text" id="firstname" name="babyName"
+								placeholder="성은 제외" style="width: 30%; font-size: 19px;" /> 성 별
+							: ♂<input type="radio" name="gender" value="남자">♀<input
+								type="radio" name="gender" value="여자">
+						</div>
+						<div>
+							핸드폰 번호 : <input type="text" name="phone" id="lastname"
+								placeholder="'-'없이 입력해주세요" style="width: 30%; font-size: 19px;" />
+						</div>
+						<div>
+							혈 액 형 :&nbsp&nbsp <input type="text" name="blood" id="lastname"
+								placeholder="알파벳만" size="30px"
+								style="width: 30%; font-size: 19px;" />
+						</div>
+						<div>
+							&nbsp&nbsp체 &nbsp&nbsp중&nbsp&nbsp&nbsp : <input type="text"
+								id="lastname" name="weight" placeholder="'kg'없이 입력해주세요"
+								style="width: 30%; font-size: 19px;" />
+						</div>
+						<div>
+							&nbsp&nbsp신 &nbsp&nbsp장&nbsp&nbsp&nbsp : <input type="text"
+								id="lastname" name="height" placeholder="'cm'없이 입력해주세요"
+								style="width: 30%; font-size: 19px;" />
+						</div>
+						<div>
+							태어난 날짜&nbsp:&nbsp&nbsp <input type="date" id="lastname"
+								name="birthday" placeholder="'-'없이 입력해주세요"
+								style="height: 30px; font-size: 19px;" />
+						</div>
+						<div>
+							<a href="index.jsp">&nbsp&nbsp&nbsp <input type="submit"
+								value="회원가입" onclick="showJoin()"
+								style="border-radius: 100%; font-family: 'a각설탕';"></a>&nbsp
+							or &nbsp <a href="#login_form" id="login_pop"><input
+								type="reset" value="초기화"
+								style="border-radius: 100%; font-family: 'a각설탕';"></a> <a
+								class="close" href="#close"></a>
+						</div>
+					</div>
+				</form>
+				<script type="text/javascript">
             
                function showJoin(){
                   
-                  alert("누구누구님! 가입을 축하드립니다!");
+                //  alert("가입을 축하드립니다!");
                   
                }
                
+               function idcheck(){
+            	   var idStr = $("#id").val();
+            	   $.ajax({
+            	       url:"../../CheckId?id="+idStr,
+            	       success:function(data){
+            	          if(data == "success"){
+            	             $("#result").text("*** 사용가능한 아이디입니다.")
+            	          }else if(data =="fail"){
+            	             $("#result").text("*** 중복된 아이디입니다.")
+            	          }
+            	       }
+            	      });
+            	}
             </script>
-</form>
+
 
 			</div>
 
@@ -388,6 +495,7 @@ a#login_pop:hover, a#join_pop:hover {
 						<li><a href="#">♥아나바다!</a></li>
 						<li><a href="#">♥물품 구매 홈페이지</a></li>
 					</ul></li>
+
 				<li><a href="left-sidebar.html"><img src="images/sun.png">나만의
 						육아일기<img src="images/sun.png"></a></li>
 				<li><a href="#"><img src="images/sun.png">이야기 해요<img
@@ -396,8 +504,8 @@ a#login_pop:hover, a#join_pop:hover {
 						<li><a href="#">♥아나바다!</a></li>
 						<li><a href="#">♥물품 구매 홈페이지</a></li>
 					</ul></li>
-				<li><a href="no-sidebar.html"><img src="images/sun.png">나의
-						아기정보<img src="images/sun.png"></a></li>
+				<li><a href="../BabyInfo/jy_BabyInfo.jsp"><img
+						src="images/sun.png">나의 아기정보<img src="images/sun.png"></a></li>
 			</ul>
 			</nav>
 
@@ -495,8 +603,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<a href="#">공지 사항</a>
 				</h2>
 				</header>
-				<p>Commodo id natoque malesuada sollicitudin elit suscipit
-					magna.</p>
+				<p>날씨, 운세, 공지사항 확인하는 공간</p>
 				</article>
 
 				<article id="art_pic"> <a href="#" class="image featured"><img
@@ -507,8 +614,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<a href="#">안전한 어린이집</a>
 				</h2>
 				</header>
-				<p>Commodo id natoque malesuada sollicitudin elit suscipit
-					magna.</p>
+				<p>각 지역의 어린이집 평점 Top10</p>
 				</article>
 
 				<article id="art_pic"> <a href="#" class="image featured"><img
@@ -519,8 +625,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<a href="#">육아 News</a>
 				</h2>
 				</header>
-				<p>Commodo id natoque malesuada sollicitudin elit suscipit
-					magna.</p>
+				<p>육아에 필요한 정보, Hot한 Issue</p>
 				</article>
 
 				<article id="art_pic"> <a href="#" class="image featured"><img
@@ -531,8 +636,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<a href="#">질병 랭킹 순위</a>
 				</h2>
 				</header>
-				<p>Commodo id natoque malesuada sollicitudin elit suscipit
-					magna.</p>
+				<p>영*유아들이 잘 걸리는 질병을 알고 미리 예방하자!</p>
 				</article>
 
 				<article id="art_pic"> <a href="#" class="image featured"><img
@@ -543,8 +647,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<a href="#">예방 접종 자료</a>
 				</h2>
 				</header>
-				<p>Commodo id natoque malesuada sollicitudin elit suscipit
-					magna.</p>
+				<p>각 시기에 맞아야 하는 예방접종 리스트</p>
 				</article>
 
 
