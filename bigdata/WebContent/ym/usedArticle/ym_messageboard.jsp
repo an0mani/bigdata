@@ -1,11 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <style type="text/css">
+	.poptrox-popup{
+	width:85% !important;
+	height:85% !important;
+	
+	}
+	.poptrox-popup .caption{
+	color:black !important;
+	height:40% !important;
+	opacity:0.5 !important;
+	}
+	.pic{
+	height:60% !important;
+	
+	}
 	#top {
-	background-image: url(images/center.jpg) !important;
+	background-image: url(images/center.png) !important;
 	font-family: 'a고래야놀자' !important;
 	
 	}
@@ -17,10 +32,12 @@
 	background-image: url(images/test.png) !important;
 	 
 	}
+	
 	tr{
 	color: black;
 	align-self: center;
 	}
+	
 	#two{
 	width:115%;
 	}
@@ -37,22 +54,11 @@
 <div id = "back">
 	<header id="header1">
 				<div class="inner1" >
-				
-				
-					<p id= "tag">
+
 					<a href="#" class="image avatar" style="margin-right: 40px;"><img src="back_image/baby.jpg" alt="" /></a>
-					<table>
-					<tr>
-					<td >??맘</td>
-					</tr>
-					<tr>
-					<td>D+??일</td>
-					</tr>
-					</table>
-					<input type = "button" name = "write" value = "글쓰기" onclick="alert('글쓰기');" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px; font-family: 'a고래야놀자'">	
-					<input type = "button" name = "menu" value = "프로필" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px ; font-family: 'a고래야놀자'">
-					<input type = "button" name = "menu" value = "내글확인" onclick="alert('메뉴');"style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 60px; font-family: 'a고래야놀자'">
-					</p>
+					<p align="center">??맘</p>
+						<input type = "button" name = "write" value = "글쓰기" onclick="location.href='ym_writing.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">	
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
 					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
@@ -81,11 +87,11 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="../firstMain/jh_main.jsp">Home</a></li>
+							<li><a href="../usedArticle/ym_messageboard.jsp">아기 용품 공간</a></li>
+							<li><a href="../Diary/jyo_diary.jsp">나만의 육아일기</a></li>
+							<li><a href="../MessageBoard/jy_messageboard.jsp">이야기해요</a></li>
+							<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
 						</ul>
 					</nav>
 
@@ -108,67 +114,33 @@
 				</ul>
 		</section> -->
 
+<%
+	ServletContext context = getServletContext();
+		String saveDir = context.getRealPath("upload");
+		request.setAttribute("save", saveDir);
+		System.out.print(saveDir);
+		 %>
 		<!-- Two -->
-		<section id="two">
-		<h2>Album</h2>
+		<section id="two" style = "border-top-width: 0px; margin-top: 0px; padding-top: 50px;">
+		<h2>중고품 판매</h2>
 		<div class="row">
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Ultricies lacinia interdum</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Tortor metus commodo</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Nunc enim commodo aliquet</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
+		<c:choose>
+	
+	<c:when test="${not empty sessionScope.list}">
+	 	<c:forEach items = "${sessionScope.list}" var="list" >
+				<article class="6u 12u$(xsmall) work-item"> <a
+				href="../../upload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
+				src="../../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
 			
+			<h3 style="font-size: 0px; coloe : black;">${list.text}</h3>
+			<p><h3 style=" color: black;">${list.num}//${list.title}//${list.wdate}</h3></p>
+			</article>
+		</c:forEach>
+	</c:when>
+
+	</c:choose>
 		
-			
+		
 		</div>
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
