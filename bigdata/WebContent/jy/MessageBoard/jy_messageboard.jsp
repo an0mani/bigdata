@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.DAO.FileVO"%>
+<%@page import="jy_com.DAO.FileVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -54,6 +54,7 @@
 	request.setAttribute("save", saveDir);
 	System.out.print(saveDir);
 %>
+
 <div id = "back">
 	<header id="header1">
 				<div class="inner1" >
@@ -135,7 +136,8 @@
             src="../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
          
          <h3 style="font-size: 0px;">${list.text}</h3>
-         <p><h3>${list.num}//${list.title}//${list.wdate}<a href='../deleteService?num=${list.num}'> 삭제</a></h3></p>
+         <h2>${list.title}</h2>
+         <p><h3>${list.num}. ${list.wdate}<a href='../numService?num=${list.num }'> 수정</a><a href='../deleteService?num=${list.num}'> 삭제</a></h3></p>
          </article>
       </c:forEach>
    </c:when>
