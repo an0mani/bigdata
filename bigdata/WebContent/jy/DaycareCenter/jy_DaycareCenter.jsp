@@ -1,3 +1,5 @@
+<%@page import="ranking.rankVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -38,6 +40,11 @@
 					<a href="#" class="image avatar"><img src="back_image/baby.jpg" alt="" /></a>
 					<p align="center">??맘</p>
 						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
+						<input type = "button" name = "menu" value = "광산구" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='ym_messageboard.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">
 
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
@@ -66,11 +73,12 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="../firstMain/jh_main.jsp">Home</a></li>
-							<li><a href="../usedArticle/ym_messageboard.jsp">아기 용품 공간</a></li>
-							<li><a href="../Diary/jyo_diary.jsp">나만의 육아일기</a></li>
-							<li><a href="../MessageBoard/jy_messageboard.jsp">이야기해요</a></li>
-							<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+								<li><a href="../firstMain/jh_main.jsp">Home</a></li>
+			<li><a href="../../ym_SelectService">아기 용품 공간</a></li>
+			<li><a href="../../DiarySelectService">나만의 육아일기</a></li>
+			<li><a href="../../SelectService">이야기해요</a></li>
+			<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+			<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 						</ul>
 					</nav>
 
@@ -99,6 +107,133 @@
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
 		</ul>
+		<div>
+	<form method="post" action="../../rankService">
+		<select name = "area">
+			<option value="gs">광산구</option>
+			<option value="e">동구</option>
+			<option value="w">서구</option>
+			<option value="s">남구</option0>
+			<option value="n">북구</option>
+		</select> <input type="submit" value="검색" >
+	</form>
+	</div>
+	
+	<div id="map" style="width: 100%; height: 1000px;"></div>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0351a47886aeab5672a46c979aadfb78"></script>
+	<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+		mapOption = {
+			center : new daum.maps.LatLng(35.15420004, 126.8847805), // 지도의 중심좌표
+			level : 7
+		// 지도의 확대 레벨
+		};
+
+		var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	
+		// 마커를 표시할 위치와 title 객체 배열입니다 
+		 
+			 var positions =[
+            <%
+               
+                ArrayList<rankVO> list = (ArrayList<rankVO>)session.getAttribute("rank");
+            	
+
+                if(list!=null){
+                for (int i = 0 ; i < list.size() ; i++) {
+                	
+                    String name = list.get(i).getName();
+                    String latitude = list.get(i).getLatitude();
+                    String longtude = list.get(i).getLongtude();
+                    String addr = list.get(i).getAddr();
+                    String tel = list.get(i).getTel();
+                    
+                    
+                    
+            %>
+            
+    			
+  			  {
+  					content: '<div style="font-size:15px;"><%=name%><br>주소:<%=addr%><br>번호:<%=tel%></div>', 
+  			        latlng: new daum.maps.LatLng(<%=Double.parseDouble(latitude)%>, <%=Double.parseDouble(longtude)%>)
+  			    },
+  			   
+  				
+            
+  		 
+          
+            <%
+                }
+                }
+                
+            %>   ]    
+			// 마커 이미지의 이미지 주소입니다
+				var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+				
+				for (var i = 0; i < positions.length; i++) {
+					
+					// 마커 이미지의 이미지 크기 입니다
+					var imageSize = new daum.maps.Size(24, 35);
+
+					// 마커 이미지를 생성합니다    
+					var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize);
+
+					
+					// 마커를 생성합니다
+				    var marker = new daum.maps.Marker({
+				        map: map, // 마커를 표시할 지도
+				        position: positions[i].latlng // 마커의 위치
+				    });
+					
+					// 마커에 표시할 인포윈도우를 생성합니다 
+				    var infowindow = new daum.maps.InfoWindow({
+				        content: positions[i].content // 인포윈도우에 표시할 내용
+				    });
+				 	
+				    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+				    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+				    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+				    daum.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+				    daum.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+					 // 마커를 지도에 표시합니다.
+					
+					 marker.setMap(map);
+					 
+
+					// 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
+					var iwContent = '<div style="padding:5px;">Hello World!</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+					// 인포윈도우를 생성합니다
+					var infowindow = new daum.maps.InfoWindow({
+					    content : iwContent
+					});
+
+					
+					
+				}
+        
+				
+			
+				// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+				function makeOverListener(map, marker, infowindow) {
+				    return function() {
+				        infowindow.open(map, marker);
+				    };
+				}
+
+				// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+				function makeOutListener(infowindow) {
+				    return function() {
+				        infowindow.close();
+				    };
+				}
+
+			
+		
+
+		
+	</script>
 		</section>
 
 		<!-- Three -->

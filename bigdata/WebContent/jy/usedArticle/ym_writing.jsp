@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -23,7 +24,32 @@
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
-			<form method="post" action="../../UploadService" enctype="multipart/form-data">
+			<c:choose>
+				<c:when test="${not empty sessionScope.set}">
+				<c:forEach items = "${sessionScope.set}" var="set" >
+				<form method="post" action="../../ym_updateService" enctype="multipart/form-data">
+				<div class="row uniform 50%">
+				
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="title" id="title" value="${set.title }" placeholder="title" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="file" name="file" id="file" value="${set.filename }" placeholder="file"  style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
+					</div>					
+					<div class="12u$">
+						<textarea name="text" id="text" placeholder="text" value="${set.text }" rows="8" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" ></textarea>
+					</div>
+					<div class="12u$">
+						<input type="submit" value="Send Message" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
+						<input type="button" value="Previous page" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
+					</div>
+				</div>
+				
+			</form>
+					</c:forEach>
+				</c:when>
+				<c:otherwise>
+					<form method="post" action="../../ym_UploadService" enctype="multipart/form-data">
 				<div class="row uniform 50%">
 				
 					<div class="6u 12u$(xsmall)">
@@ -42,6 +68,9 @@
 				</div>
 				
 			</form>
+				</c:otherwise>
+			</c:choose>
+			
 		</div>
 	</div>
 	</section>
