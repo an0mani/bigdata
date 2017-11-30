@@ -12,6 +12,7 @@
 	font-family: 'a고래야놀자';
 }
 </style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet"
