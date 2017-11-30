@@ -298,7 +298,7 @@ a#login_pop:hover, a#join_pop:hover {
 					<c:otherwise>
 						<div style="margin-right: 10%;">
 							<a href="#banner" class="scrolly"
-								style="color: black; font-weight: bold; font-size: 41px; font-family: 'a고래야놀자'; "> 육아일기 시작! </a>
+								style="color: black; font-weight: bold; font-size: 41px; font-family: 'a고래야놀자'; "><input type="button" value="육아일기 시작!" style="border-radius: 100%; font-family: 'a고래야놀자'; font-weight: bold; font-size: 31px; "></a>
 						</div>
 					</c:otherwise>
 				</c:choose>
@@ -513,8 +513,6 @@ a#login_pop:hover, a#join_pop:hover {
 
 
 		<!-- Banner -->
-
-
 
 
 
