@@ -3,7 +3,6 @@ package jy_com.example;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import jy_com.DAO.FileDAO;
 import jy_com.DAO.FileVO;
 @WebServlet("/SelectService")
@@ -37,8 +35,6 @@ public class SelectService extends HttpServlet {
          // TODO Auto-generated catch block
          e.printStackTrace();
       }
-      
-      
       
    }
 

@@ -77,15 +77,19 @@ public class FileDAO {
    public ArrayList<FileVO> SelectOne(int num) throws Exception {
       getConnection();
 
-      pst = conn.prepareStatement("select * from baby_messageboard where num = ?");
+      pst = conn.prepareStatement("select * from baby_messageboard where m_num = ?");
       pst.setInt(1, num);
+      
       rs = pst.executeQuery();
+      
       ArrayList<FileVO> list = new ArrayList<>();
       
       while(rs.next()) {
          list.add(new FileVO(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
-         }
+      }
+      
       close();
+      
       return list;
       
    }
@@ -97,6 +101,26 @@ public class FileDAO {
 		pst = conn.prepareStatement("delete from baby_messageboard where m_num = ?");
 		pst.setInt(1, num);
 		
+		int cnt = pst.executeUpdate();
+		
+		return cnt;
+		
+	}
+
+	public int messageUpdate(String name, String title, String text, String wdate, String filename, String num) throws Exception {
+		
+		getConnection();
+		
+		int num1 = Integer.parseInt(num);
+		
+		pst = conn.prepareStatement("update baby_messageboard set m_id = ? and title = ? and text = ? and wdate = ? and filename = ? where m_num = ?");
+	      pst.setString(1, name);
+	      pst.setString(2, title);
+	      pst.setString(3, text);
+	      pst.setString(4, wdate);
+	      pst.setString(5, filename);
+	      pst.setInt(6, num1);
+
 		int cnt = pst.executeUpdate();
 		
 		return cnt;
