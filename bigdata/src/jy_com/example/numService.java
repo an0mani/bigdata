@@ -3,6 +3,7 @@ package jy_com.example;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpSession;
 
 import jy_com.DAO.FileDAO;
 import jy_com.DAO.FileVO;
+import ym_com.DAO.ym_FileDAO;
+import ym_com.DAO.ym_FileVO;
 
 @WebServlet("/numService")
 public class numService extends HttpServlet {
@@ -32,7 +35,7 @@ public class numService extends HttpServlet {
 			if (list != null) {
 				session.setAttribute("set", list);
 			}
-				response.sendRedirect("MessageBoard/jy_writing.jsp");
+				response.sendRedirect("jy/MessageBoard/jy_writing.jsp");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

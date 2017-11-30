@@ -1,6 +1,7 @@
 package jy_com.example;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -8,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
@@ -15,6 +18,8 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import jy_com.DAO.FileDAO;
+import jy_com.DAO.FileVO;
+import ym_com.DAO.ym_FileDAO;
 
 @WebServlet("/updateService")
 public class updateService extends HttpServlet {
@@ -52,9 +57,11 @@ public class updateService extends HttpServlet {
 		boolean isMulti = ServletFileUpload.isMultipartContent(request);
 		
 		ServletContext context = getServletContext();		// 정보가 context라는 객체에 담기게 됨.
-		String saveDir = context.getRealPath("upload");
+		String saveDir = context.getRealPath("mupload");
+		System.out.print(saveDir);
+		HttpSession session = request.getSession();
 		//System.out.println("절대경로 : " + saveDir);
-		int maxSize = 3*1024*1024;		// 3MB
+		int maxSize = 30*1024*1024;		// 3MB
 		String encoding = "euc-kr";
 		MultipartRequest multi = null;
 		
@@ -63,14 +70,14 @@ public class updateService extends HttpServlet {
 			multi = new MultipartRequest(request, saveDir, maxSize, encoding, new DefaultFileRenamePolicy());
 			System.out.println("파일전송 form 입니다.");
 			FileDAO dao = new FileDAO();
+			ArrayList<FileVO> list = (ArrayList<FileVO>) session.getAttribute("set");		
 			
 			String name = multi.getParameter("name");
 			String title = multi.getParameter("title");
 			String message = multi.getParameter("message");
 			String date = multi.getParameter("date");
 			String file = multi.getFilesystemName("file");
-			String num = multi.getParameter("num");
-			
+			int num = list.get(0).getNum();
 			System.out.println(name);
 			System.out.println(title);
 			System.out.println(message);
@@ -87,7 +94,7 @@ public class updateService extends HttpServlet {
 					moveUrl = "SelectService";
 				}else {
 					System.out.println("저장 실패");
-					moveUrl = "MessageBoard/jy_writing.jsp";
+					moveUrl = "jy/MessageBoard/jy_writing.jsp";
 				}
 				
 				response.sendRedirect(moveUrl);

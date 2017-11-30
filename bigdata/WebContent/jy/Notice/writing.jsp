@@ -22,7 +22,7 @@
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
-			<form method="post" action="../NoticeUploadService" enctype="multipart/form-data">
+			<form method="post" action="../../NoticeUploadService" enctype="multipart/form-data">
 				<div class="row uniform 50%">
 					<div class="6u 12u$(xsmall)">
 						<input type="text" name="title" id="title" placeholder="title" style = "font-family: 'a°í·¡¾ß³îÀÚ'; color:black;"/><br>

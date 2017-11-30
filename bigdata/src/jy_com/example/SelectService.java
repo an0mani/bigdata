@@ -3,6 +3,7 @@ package jy_com.example;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import jy_com.DAO.FileDAO;
 import jy_com.DAO.FileVO;
+import ym_com.DAO.ym_FileDAO;
+import ym_com.DAO.ym_FileVO;
 @WebServlet("/SelectService")
 public class SelectService extends HttpServlet {
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +33,7 @@ public class SelectService extends HttpServlet {
         	 session.setAttribute("list", list);
          }
 
-         response.sendRedirect("MessageBoard/jy_messageboard.jsp");
+         response.sendRedirect("jy/MessageBoard/jy_messageboard.jsp");
          
       } catch (Exception e) {
          // TODO Auto-generated catch block

@@ -15,6 +15,7 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import jy_com.DAO.FileDAO;
+import ym_com.DAO.ym_FileDAO;
 
 @WebServlet("/messageboard")
 public class messageboard extends HttpServlet {
@@ -27,7 +28,7 @@ public class messageboard extends HttpServlet {
 		boolean isMulti = ServletFileUpload.isMultipartContent(request);
 		
 		ServletContext context = getServletContext();		// 정보가 context라는 객체에 담기게 됨.
-		String saveDir = context.getRealPath("upload");
+		String saveDir = context.getRealPath("mupload");
 		//System.out.println("절대경로 : " + saveDir);
 		int maxSize = 3*1024*1024;		// 3MB
 		String encoding = "euc-kr";
@@ -54,7 +55,7 @@ public class messageboard extends HttpServlet {
 					moveUrl = "SelectService";
 				}else {
 					System.out.println("저장 실패");
-					moveUrl = "MessageBoard/jy_writing.jsp";
+					moveUrl = "jy/MessageBoard/jy_writing.jsp";
 				}
 				
 				response.sendRedirect(moveUrl);

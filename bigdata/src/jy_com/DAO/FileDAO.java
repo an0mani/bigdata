@@ -107,19 +107,18 @@ public class FileDAO {
 		
 	}
 
-	public int messageUpdate(String name, String title, String text, String wdate, String filename, String num) throws Exception {
+	public int messageUpdate(String name, String title, String text, String wdate, String filename, int num) throws Exception {
 		
 		getConnection();
 		
-		int num1 = Integer.parseInt(num);
 		
-		pst = conn.prepareStatement("update baby_messageboard set m_id = ? and title = ? and text = ? and wdate = ? and filename = ? where m_num = ?");
-	      pst.setString(1, name);
-	      pst.setString(2, title);
-	      pst.setString(3, text);
-	      pst.setString(4, wdate);
-	      pst.setString(5, filename);
-	      pst.setInt(6, num1);
+		pst = conn.prepareStatement("update baby_messageboard set title = ? , text = ? , wdate = ? , filename = ? where m_num = ?");
+	      
+	      pst.setString(1, title);
+	      pst.setString(2, text);
+	      pst.setString(3, wdate);
+	      pst.setString(4, filename);
+	      pst.setInt(5, num);
 
 		int cnt = pst.executeUpdate();
 		

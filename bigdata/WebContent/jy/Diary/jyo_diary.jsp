@@ -16,7 +16,7 @@
    }
    .pic{
    height:60% !important;
-   
+   }
 #top{
 	background-image: url(images/center.png);
 }
@@ -56,7 +56,8 @@
 					<form action = "writing.jsp">
 					<p align="center">??맘</p>
 						<input type = "button" name = "write" value = "글쓰기" onclick="location.href='jyo_writing.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">	
-						<input type = "button" name = "menu" value = "목  록" onclick="location.href='jyo_diary.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">					</form>
+						<input type = "button" name = "menu" value = "목  록" onclick="location.href='jyo_diary.jsp'" style="width: 50px; height: 50px; min-width: 6em !important; font-size: 15px; text-align: center; color: black !important; margin-right: 0px; font-family: 'a고래야놀자'">					
+						</form>
 					<!-- <h1><strong>I am Strata</strong>, a super simple<br />
 					responsive site template freebie<br />
 					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1> -->
@@ -84,11 +85,12 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="../firstMain/jh_main.jsp">Home</a></li>
-							<li><a href="../usedArticle/ym_messageboard.jsp">아기 용품 공간</a></li>
-							<li><a href="../Diary/jyo_diary.jsp">나만의 육아일기</a></li>
-							<li><a href="../MessageBoard/jy_messageboard.jsp">이야기해요</a></li>
-							<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+								<li><a href="../firstMain/jh_main.jsp">Home</a></li>
+			<li><a href="../../ym_SelectService">아기 용품 공간</a></li>
+			<li><a href="../../DiarySelectService">나만의 육아일기</a></li>
+			<li><a href="../../SelectService">이야기해요</a></li>
+			<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+			<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 						</ul>
 					</nav>
 
@@ -118,13 +120,14 @@
    
    				<c:when test="${not empty sessionScope.list}">
        			<c:forEach items = "${sessionScope.list}" var="list" >
-            	<article class="6u 12u$(xsmall) work-item"> <a href="../upload/${list.file}" class="image fit thumb" style= " max-width :300px; max-height:300px;">
-            	<img src="../upload/${list.file}" alt="" style=" width: 300px;height: 300px;"/></a>
+            	<article class="6u 12u$(xsmall) work-item"> <a href="../../dupload/${list.file}" class="image fit thumb" style= " max-width :300px; max-height:300px;">
+            	<img src="../../dupload/${list.file}" alt="" style=" width: 300px;height: 300px;"/></a>
          
          
-        		<h3>${list.text}</h3>
-         		<p><h3 style="color:black;">${list.num}//${list.title}//${list.date}</h3></p>
-         		</article>
+        		  <h3 style="font-size: 0px;">${list.text}</h3>
+         <h2>${list.title}</h2>
+         <p><h3>${list.num}. ${list.date}<a href='../../DiarynumService?num=${list.num }'> 수정</a><a href='../../DiaryDeleteService?num=${list.num}'> 삭제</a></h3></p>
+        </article>
       			</c:forEach>
   				</c:when>
 
