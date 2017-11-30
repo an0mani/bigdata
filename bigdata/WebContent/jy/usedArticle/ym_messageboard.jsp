@@ -5,6 +5,20 @@
 <html>
 <head>
 <style type="text/css">
+	.poptrox-popup{
+	width:85% !important;
+	height:85% !important;
+	
+	}
+	.poptrox-popup .caption{
+	color:black !important;
+	height:40% !important;
+	opacity:0.5 !important;
+	}
+	.pic{
+	height:60% !important;
+	
+	}
 	#top {
 	background-image: url(images/center.png) !important;
 	font-family: 'a°í·¡¾ß³îÀÚ' !important;
@@ -118,8 +132,8 @@
 				href="../../upload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
 				src="../../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
 			
-			<h3 style="font-size: 0px;">${list.text}</h3>
-			<p><h3>${list.num}//${list.title}//${list.wdate}</h3></p>
+			<h3 style="font-size: 0px; coloe : black;">${list.text}</h3>
+			<p><h3 style=" color: black;">${list.num}//${list.title}//${list.wdate}</h3></p>
 			</article>
 		</c:forEach>
 	</c:when>

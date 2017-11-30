@@ -30,9 +30,6 @@
 						<input type="text" name="title" id="title" placeholder="title" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>
 					<div class="6u$ 12u$(xsmall)">
-						<input type="date" name="date" id="date" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
-					</div>			
-					<div class="6u$ 12u$(xsmall)">
 						<input type="file" name="file" id="file" placeholder="file"  style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>					
 					<div class="12u$">
