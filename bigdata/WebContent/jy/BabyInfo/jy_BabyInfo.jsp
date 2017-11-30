@@ -4,19 +4,19 @@
 <html>
 <head>
 <style type="text/css">
-	#top {
-		background-image: url("babyimage.png");
-		background-repeat: no-repeat;
-		font-family: 'a고래야놀자';
-		font-size: x-large;
-    	margin-right: 400px;
-    	margin-left: 50px;
-	}
-	
-  	th, td {
-    	border-bottom: 1px solid #444444;
-    	padding: 10px;
-  	}
+#top {
+	background-image: url("babyimage.png");
+	background-repeat: no-repeat;
+	font-family: 'a고래야놀자';
+	font-size: x-large;
+	margin-right: 400px;
+	margin-left: 50px;
+}
+
+th, td {
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+}
 </style>
 <title>to baby from mom, message board</title>
 <meta charset="utf-8" />
@@ -38,18 +38,18 @@
 				<li><a href="#menu">Menu</a></li>
 			</ul>
 			</nav>
-
+			
 		</div>
 		</header>
 		<nav id="menu">
 		<h2>Menu</h2>
 		<ul>
-			<li><a href="index.html">홈페이지</a></li>
-			<li><a href="generic.html">아기용품공간</a></li>
-			<li><a href="generic.html">나만의 육아일기</a></li>
-			<li><a href="generic.html">이야기해요</a></li>
-			<li><a href="elements.html">나의 아기정보</a></li>
-			<li><a href="elements.html">로그아웃</a></li>
+			<li><a href="../firstMain/jh_main.jsp">Home</a></li>
+			<li><a href="../../ym_SelectService">아기 용품 공간</a></li>
+			<li><a href="../../DiarySelectService">나만의 육아일기</a></li>
+			<li><a href="../../SelectService">이야기해요</a></li>
+			<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+			<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 		</ul>
 		</nav>
 
@@ -61,44 +61,80 @@
 		style="margin-left: 380px; padding-top: 0px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px; margin-left: 300px;">
 
 		<!-- One -->
-		<section id="one">
-		<header class="major">
-		
-		<img src="baby.png" width="200px" height="200px" style="margin-left: 450px; margin-top: 100px;">
-		<table border='1' align="center" style="border-top: 1px solid #444444; border-collapse: collapse; width: 700px; margin-left: 200px;">
-			<tr>
-				<td align="center">이 름</td>
-				<td align="center">#</td>
-			</tr>
-			
-			<tr>
-				<td align="center">성 별</td><td align="center"> 여자 <input type="radio" value="gender" checked="checked" name="여자"> 남자 <input type="radio" value="gender" checked="checked" name="남자"></td>
-			</tr>
-			
-			<tr>
-				<td align="center">생년월일</td><td align="center">#</td>
-			</tr>
-			
-			<tr>
-				<td align="center">혈액형</td><td align="center">#</td>
-			</tr>
-			
-			<tr>
-				<td align="center">몸무게</td><td align="center">#</td>
-			</tr>
-			
-			<tr>
-				<td align="center">신 장</td><td align="center">#</td>
-			</tr>																	
-		</table>
+		<form action="../../UpdateCon" method="post">
+			<section id="one"> <header class="major"><img
+				src="baby.png" width="200px" height="200px"
+				style="margin-left: 450px; margin-top: 100px;">
 
-		<ul class="actions">
-			<li align="center"><a href="#" class="button" style="margin-left: 430px;">수정하기</a></li>
-		</ul>
+
+			<table border='1' align="center"
+				style="border-top: 1px solid #444444; border-collapse: collapse; width: 700px; margin-left: 200px;">
+				<tr>
+					<td align="center">이 름</td>
+					<td align="center"><input type="text" value="${Login_name }"
+						name="baby_Name"></td>
+				</tr>
+
+				<tr>
+					<td align="center">성 별</td>
+					<td align="center"><input type="text" value="${Login_sex }"
+						name="sex"></td>
+				</tr>
+
+				<tr>
+					<td align="center">생년월일</td>
+					<td align="center"><input type="text" value="${Login_birth }"
+						name="birth"></td>
+				</tr>
+
+				<tr>
+					<td align="center">혈액형</td>
+					<td align="center"><input type="text" value="${Login_blood }"
+						name="blood"></td>
+				</tr>
+
+				<tr>
+					<td align="center">몸무게</td>
+					<td align="center"><input type="text" value="${Login_weight }"
+						name="weight"></td>
+				</tr>
+
+				<tr>
+					<td align="center">신 장</td>
+					<td align="center"><input type="text" value="${Login_height }"
+						name="height"></td>
+				</tr>
+			</table>
+
+
+			<div class="actions" style="text-align: center;">
+				<input type="submit" value="수정하기">
+				<input type="button" value="탈퇴하기" onclick="confirmOut()">
 				
-	</header>
-</section>
+			</div>
+		</form>
+		
+		<script type="text/javascript">
+			function confirmOut(){
+				
+				var pass = prompt("탈퇴를 위해 비밀번호를 다시한번 입력해주세요")
+				
+				var real_pass = <%=(String)session.getAttribute("password")%>
+				
+				if(real_pass==pass){
+					
+					location.href = "../../DeleteCon";
 
+					//window.opener.location.href="http://www.naver.com";
+
+				}else{
+					alert("비밀번호를 틀리게 입력하셨습니다.")
+					location.href = "jy_BabyInfo.jsp";
+				}
+					
+			}
+		
+		</script>
 		<!-- Two -->
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
