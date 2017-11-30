@@ -1,9 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <style type="text/css">
+	.poptrox-popup{
+	width:85% !important;
+	height:85% !important;
+	
+	}
+	.poptrox-popup .caption{
+	color:black !important;
+	height:40% !important;
+	opacity:0.5 !important;
+	}
+	.pic{
+	height:60% !important;
+	
+	}
 	#top {
 	background-image: url(images/center.png) !important;
 	font-family: 'a고래야놀자' !important;
@@ -99,67 +114,33 @@
 				</ul>
 		</section> -->
 
+<%
+	ServletContext context = getServletContext();
+		String saveDir = context.getRealPath("upload");
+		request.setAttribute("save", saveDir);
+		System.out.print(saveDir);
+		 %>
 		<!-- Two -->
 		<section id="two" style = "border-top-width: 0px; margin-top: 0px; padding-top: 50px;">
 		<h2>중고품 판매</h2>
 		<div class="row">
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Ultricies lacinia interdum</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Tortor metus commodo</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Nunc enim commodo aliquet</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
+		<c:choose>
+	
+	<c:when test="${not empty sessionScope.list}">
+	 	<c:forEach items = "${sessionScope.list}" var="list" >
+				<article class="6u 12u$(xsmall) work-item"> <a
+				href="../../upload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
+				src="../../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
 			
+			<h3 style="font-size: 0px; coloe : black;">${list.text}</h3>
+			<p><h3 style=" color: black;">${list.num}//${list.title}//${list.wdate}</h3></p>
+			</article>
+		</c:forEach>
+	</c:when>
+
+	</c:choose>
 		
-			
+		
 		</div>
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
