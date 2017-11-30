@@ -1,5 +1,8 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.FileVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,6 +27,17 @@
 	#two{
 	width:110%;
 	}
+	.poptrox-popup {
+		width: 85% !important;
+		height: 85% important;
+	}
+	.caption {
+		height: 40% !important;
+		opacity: 0.5 important;
+	}
+	.pic {
+		height: 60% !important;
+	}
 	
 </style>
 <title>to baby from mom, message board</title>
@@ -34,6 +48,12 @@
 <link rel="stylesheet" href="assets/css/main2.css" />
 </head>
 <body id="top" class="homepage">
+<%
+	ServletContext context = getServletContext();
+	String saveDir = context.getRealPath("upload");
+	request.setAttribute("save", saveDir);
+	System.out.print(saveDir);
+%>
 <div id = "back">
 	<header id="header1">
 				<div class="inner1" >
@@ -71,8 +91,9 @@
 							<li><a href="../firstMain/jh_main.jsp">Home</a></li>
 							<li><a href="../usedArticle/ym_messageboard.jsp">아기 용품 공간</a></li>
 							<li><a href="../Diary/jyo_diary.jsp">나만의 육아일기</a></li>
-							<li><a href="../MessageBoard/jy_messageboard.jsp">이야기해요</a></li>
+							<li><a href="../SelectService">이야기해요</a></li>
 							<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+							<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 						</ul>
 					</nav>
 
@@ -98,70 +119,34 @@
 		<!-- Two -->
 		<section id="two">
 		<h2>게시판/소통해요</h2>
-		<div class="row">
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Magna sed consequat tempus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Ultricies lacinia interdum</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Tortor metus commodo</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Nunc enim commodo aliquet</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="6u$ 12u$(xsmall) work-item"> <a
-				href="images/fulls/baby.jpg" class="image fit thumb"><img
-				src="images/thumbs/baby.jpg" alt="" /></a>
-			<h3>Quam neque phasellus</h3>
-			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			
 		
-			
+<%-- 		<%
+			String a = (String)session.getAttribute("list");
+		%>
+		<%=a %> --%>
+
+		<div class="row">
+   <c:choose>
+   
+   <c:when test="${not empty sessionScope.list}">
+       <c:forEach items = "${sessionScope.list}" var="list" >
+            <article class="6u 12u$(xsmall) work-item"> <a
+            href="../upload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
+            src="../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
+         
+         <h3 style="font-size: 0px;">${list.text}</h3>
+         <p><h3>${list.num}//${list.title}//${list.wdate}<a href='../deleteService?num=${list.num}'> 삭제</a></h3></p>
+         </article>
+      </c:forEach>
+   </c:when>
+
+   </c:choose>
+		
 		</div>
 		<ul class="actions">
 			<!-- <li><a href="#" class="button">Full Portfolio</a></li> -->
 		</ul>
 		</section>
-
 		<!-- Three -->
 		<!-- <section id="three">
 						<h2>Get In Touch</h2>

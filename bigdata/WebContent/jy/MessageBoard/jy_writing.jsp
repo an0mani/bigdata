@@ -23,14 +23,17 @@
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
-			<form method="post" action="#">
+			<form method="post" action="../messageboard" enctype="multipart/form-data">
 				<div class="row uniform 50%">
 					<div class="6u 12u$(xsmall)">
 						<input type="text" name="title" id="title" placeholder="title" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>
 					<div class="6u$ 12u$(xsmall)">
 						<input type="text" name="name" id="name" placeholder="name" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
-					</div>			
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+                  		<input type="date" name="date" id="date" style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;" />
+               		</div>
 					<div class="6u$ 12u$(xsmall)">
 						<input type="file" name="file" id="file" placeholder="file"  style="font-family: 'a°í·¡¾ß³îÀÚ';color:black;"/>
 					</div>					

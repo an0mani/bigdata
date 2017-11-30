@@ -61,7 +61,6 @@ th, td {
 		style="margin-left: 380px; padding-top: 0px; padding-bottom: 100px; padding-left: 50px; padding-right: 0px; border-bottom-width: 100px; margin-left: 300px;">
 
 		<!-- One -->
-		<form action="../../DeleteCon" method="post">
 		<form action="../../UpdateCon" method="post">
 			<section id="one"> <header class="major"> <img
 				src="baby.png" width="200px" height="200px"
@@ -110,16 +109,29 @@ th, td {
 
 			<div class="actions" style="text-align: center;">
 				<input type="submit" value="수정하기">
-				<input type="submit" value="탈퇴하기" onclick="confirmOut()">
+				<input type="button" value="탈퇴하기" onclick="confirmOut()">
+				
 			</div>
-		</form>
 		</form>
 		
 		<script type="text/javascript">
 			function confirmOut(){
 				
-				prompt("탈퇴를 위해 비밀번호를 다시한번 입력해주세요")
+				var pass = prompt("탈퇴를 위해 비밀번호를 다시한번 입력해주세요")
 				
+				var real_pass = <%=(String)session.getAttribute("password")%>
+				
+				if(real_pass==pass){
+					
+					location.href = "../../DeleteCon";
+
+					//window.opener.location.href="http://www.naver.com";
+
+				}else{
+					alert("비밀번호를 틀리게 입력하셨습니다.")
+					location.href = "jy_BabyInfo.jsp";
+				}
+					
 			}
 		
 		</script>
