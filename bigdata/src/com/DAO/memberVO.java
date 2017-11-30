@@ -58,6 +58,21 @@ public class memberVO {
 		this.babyName = babyName;
 		this.cnt = cnt;
 	}
+	
+	public memberVO(String id, String pw, String babyName, String gender, String blood, int weight, int height,
+			String birthday, int cnt) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.babyName = babyName;
+		this.gender = gender;
+		this.blood = blood;
+		this.weight = weight;
+		this.height = height;
+		this.birthday = birthday;
+		this.cnt = cnt;
+	}
+
 
 	public String getId() {
 		return id;

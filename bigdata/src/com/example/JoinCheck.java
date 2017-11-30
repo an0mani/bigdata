@@ -42,7 +42,7 @@ public class JoinCheck extends HttpServlet {
 				
 				HttpSession session = request.getSession();
 				
-				response.sendRedirect("jh/firstMain/jh_main.jsp");
+				response.sendRedirect("jy/firstMain/jh_main.jsp");
 				
 			}
 			
