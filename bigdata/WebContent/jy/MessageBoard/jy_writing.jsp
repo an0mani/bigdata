@@ -12,7 +12,6 @@
 	font-family: 'a고래야놀자';
 }
 </style>
-
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet"
@@ -28,13 +27,11 @@
 	<p align="center"></p>
 	<div class="row" style="padding-left: 500px; padding-right: 0px">
 		<div class="8u 12u$(small)">
-			<%
-				
-			%>
+			
 			<c:choose>
 				<c:when test="${not empty sessionScope.set}">
 				<c:forEach items = "${sessionScope.set}" var="set" >
-					<form method="post" action="../updateService"
+					<form method="post" action="../../updateService"
 						enctype="multipart/form-data">
 						<div class="row uniform 50%">
 							<div class="6u 12u$(xsmall)">
@@ -73,7 +70,7 @@
 					</c:forEach>
 				</c:when>
 				<c:otherwise>
-					<form method="post" action="../messageboard"
+					<form method="post" action="../../messageboard"
 						enctype="multipart/form-data">
 						<div class="row uniform 50%">
 							<div class="6u 12u$(xsmall)">

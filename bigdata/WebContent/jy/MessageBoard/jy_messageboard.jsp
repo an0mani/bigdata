@@ -54,7 +54,6 @@
 	request.setAttribute("save", saveDir);
 	System.out.print(saveDir);
 %>
-
 <div id = "back">
 	<header id="header1">
 				<div class="inner1" >
@@ -89,12 +88,12 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="../firstMain/jh_main.jsp">Home</a></li>
-							<li><a href="../usedArticle/ym_messageboard.jsp">아기 용품 공간</a></li>
-							<li><a href="../Diary/jyo_diary.jsp">나만의 육아일기</a></li>
-							<li><a href="../SelectService">이야기해요</a></li>
-							<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
-							<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
+								<li><a href="../firstMain/jh_main.jsp">Home</a></li>
+			<li><a href="../../ym_SelectService">아기 용품 공간</a></li>
+			<li><a href="../../DiarySelectService">나만의 육아일기</a></li>
+			<li><a href="../../SelectService">이야기해요</a></li>
+			<li><a href="../../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+			<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 						</ul>
 					</nav>
 
@@ -132,12 +131,12 @@
    <c:when test="${not empty sessionScope.list}">
        <c:forEach items = "${sessionScope.list}" var="list" >
             <article class="6u 12u$(xsmall) work-item"> <a
-            href="../upload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
-            src="../upload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
+            href="../../mupload/${list.filename}" class="image fit thumb" style= " max-width :300px; max-height:300px;"><img
+            src="../../mupload/${list.filename}" alt="" style=" width: 300px;height: 300px;"/></a>
          
          <h3 style="font-size: 0px;">${list.text}</h3>
          <h2>${list.title}</h2>
-         <p><h3>${list.num}. ${list.wdate}<a href='../numService?num=${list.num }'> 수정</a><a href='../deleteService?num=${list.num}'> 삭제</a></h3></p>
+         <p><h3>${list.num}. ${list.wdate}<a href='../../numService?num=${list.num }'> 수정</a><a href='../../deleteService?num=${list.num}'> 삭제</a></h3></p>
          </article>
       </c:forEach>
    </c:when>
