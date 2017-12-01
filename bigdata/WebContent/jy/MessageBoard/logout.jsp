@@ -8,8 +8,9 @@
 </head>
 <body>
 	<%
-		session.removeAttribute("id");
+		session.invalidate();
 		response.sendRedirect("../firstMain/jh_main.jsp");
+		
 	%>
 </body>
 </html>

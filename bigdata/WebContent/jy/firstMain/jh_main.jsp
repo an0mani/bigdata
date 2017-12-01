@@ -265,8 +265,14 @@ a#login_pop:hover, a#join_pop:hover {
 <body class="homepage">
 
 	<script>
+	 	$('body').css({'overflow': 'hidden'});
 
-</script>
+	 	function scrollTest(){
+	 		$('body').css({'overflow': 'scroll'});
+	 	}
+	
+ 		
+	</script>
 </head>
 <body>
 
@@ -296,9 +302,9 @@ a#login_pop:hover, a#join_pop:hover {
 						<br>
 					</c:when>
 					<c:otherwise>
-						<div style="margin-right: 10%;">
-							<a href="#banner" class="scrolly"
-								style="color: black; font-weight: bold; font-size: 41px; font-family: 'a°í·¡¾ß³îÀÚ'; "><input type="button" value= "${Login_name }¾ö¸¶ÀÇ À°¾ÆÀÏ±â ½ÃÀÛ!" style="border-radius: 100%; font-family: 'a°í·¡¾ß³îÀÚ'; font-weight: bold; font-size: 31px; "></a>
+						<div style="margin-right: 10%;" >
+							<a href="#banner" class="scrolly" onclick="scrollTest()"
+								style="color: black; font-weight: bold; font-size: 41px; font-family: 'a°í·¡¾ß³îÀÚ'; "><input id="startBtn" type="button" value= "${Login_name }¾ö¸¶ÀÇ À°¾ÆÀÏ±â ½ÃÀÛ!" style="border-radius: 100%; font-family: 'a°í·¡¾ß³îÀÚ'; font-weight: bold; font-size: 31px; "></a>
 						</div>
 					</c:otherwise>
 				</c:choose>

@@ -78,7 +78,7 @@
 			<li><a href="../../ym_SelectService">아기 용품 공간</a></li>
 			<li><a href="../../DiarySelectService">나만의 육아일기</a></li>
 			<li><a href="../../SelectService">이야기해요</a></li>
-			<li><a href="../../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
+			<li><a href="../BabyInfo/jy_BabyInfo.jsp">나의 아기정보</a></li>
 			<li><a href="../MessageBoard/logout.jsp">로그아웃</a></li>
 					</nav>
 
